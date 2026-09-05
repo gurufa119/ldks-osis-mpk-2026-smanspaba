@@ -1,0 +1,1842 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LDKS OSIS & MPK 2026/2027 - SMAN 1 Pagerbarang</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#1e3a8a',
+            },
+            gold: {
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+            }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Google Fonts & FontAwesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .glass-effect {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+    }
+    .dark .glass-effect {
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(12px);
+    }
+    .hex-clip {
+      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100 transition-colors duration-300">
+
+  <!-- TOP BAR / NOTIFICATION BANNER -->
+  <div class="bg-gradient-to-r from-blue-700 via-indigo-600 to-blue-800 text-white text-xs sm:text-sm py-2 px-4 text-center font-medium shadow-inner">
+    <span class="inline-block bg-blue-900/50 px-2.5 py-0.5 rounded-full mr-2 text-xs border border-blue-400/30">
+      <i class="fa-solid fa-calendar-check mr-1 text-gold-400"></i> 6 September 2026
+    </span>
+    LDKS OSIS-MPK SMA Negeri 1 Pagerbarang Masa Bhakti 2026/2027
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 transition-all duration-300 glass-effect border-b border-slate-200 dark:border-slate-800 shadow-sm" id="mainHeader">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        
+        <!-- LOGO & BRAND -->
+        <a href="#home" class="flex items-center gap-3 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-700 flex items-center justify-center text-white font-bold text-xl shadow-md group-hover:scale-105 transition-transform">
+            <i class="fa-solid fa-sitemap"></i>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-extrabold text-base tracking-tight text-blue-900 dark:text-blue-400 leading-none">LDKS 2026</span>
+            <span class="text-xs text-slate-500 dark:text-slate-400 font-semibold">SMAN 1 Pagerbarang</span>
+          </div>
+        </a>
+
+        <!-- DESKTOP MENU -->
+        <nav class="hidden lg:flex items-center gap-1 xl:gap-2 text-xs xl:text-sm font-semibold text-slate-700 dark:text-slate-300">
+          <a href="#home" class="px-3 py-2 rounded-lg hover:text-blue-600 hover:bg-blue-50 dark:hover:bg-slate-800 transition">Home</a>
+          <a href="#dasar-hukum" class="px-3 py-2 rounded-lg hover:text-blue-600 hover:bg-blue-50 dark:hover:bg-slate-800 transition">Dasar Hukum</a>
+          <a href="#pembina" class="px-3 py-2 rounded-lg hover:text-blue-600 hover:bg-blue-50 dark:hover:bg-slate-800 transition">Pembina</a>
+          <a href="#muatan" class="px-3 py-2 rounded-lg hover:text-blue-600 hover:bg-blue-50 dark:hover:bg-slate-800 transition">Muatan</a>
+          <a href="#osis" class="px-3 py-2 rounded-lg hover:text-blue-600 hover:bg-blue-50 dark:hover:bg-slate-800 transition">OSIS</a>
+          <a href="#mpk" class="px-3 py-2 rounded-lg hover:text-blue-600 hover:bg-blue-50 dark:hover:bg-slate-800 transition">MPK</a>
+          <a href="#alur-kerja" class="px-3 py-2 rounded-lg hover:text-blue-600 hover:bg-blue-50 dark:hover:bg-slate-800 transition">Alur Kerja</a>
+          <a href="#ice-breaking" class="px-3 py-2 rounded-lg text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/40 hover:bg-emerald-100 transition">
+            <i class="fa-solid fa-gamepad mr-1"></i> Ice Breaking
+          </a>
+          <a href="#narasumber" class="px-3 py-2 rounded-lg hover:text-blue-600 hover:bg-blue-50 dark:hover:bg-slate-800 transition">Narasumber</a>
+        </nav>
+
+        <!-- RIGHT UTILITIES -->
+        <div class="flex items-center gap-2 sm:gap-3">
+          <!-- Dark Mode Toggle -->
+          <button id="themeToggle" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition" title="Ganti Mode Gelap/Terang">
+            <i class="fa-solid fa-moon dark:hidden"></i>
+            <i class="fa-solid fa-sun hidden dark:inline"></i>
+          </button>
+
+          <!-- CTA Mobile/Desktop -->
+          <a href="#ice-breaking" class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold shadow-md hover:shadow-lg hover:opacity-95 transition">
+            <i class="fa-solid fa-play text-xs"></i> Mulai Kuis
+          </a>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button id="mobileMenuBtn" class="lg:hidden p-2.5 rounded-xl border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+            <i class="fa-solid fa-bars text-lg" id="menuIcon"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- MOBILE MENU DRAWER -->
+    <div id="mobileMenu" class="hidden lg:hidden border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 pt-2 pb-6 space-y-1">
+      <a href="#home" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-slate-700 dark:text-slate-200 font-medium hover:bg-slate-100 dark:hover:bg-slate-800">Home</a>
+      <a href="#dasar-hukum" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-slate-700 dark:text-slate-200 font-medium hover:bg-slate-100 dark:hover:bg-slate-800">Dasar Hukum</a>
+      <a href="#pembina" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-slate-700 dark:text-slate-200 font-medium hover:bg-slate-100 dark:hover:bg-slate-800">Pembina Kesiswaan</a>
+      <a href="#muatan" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-slate-700 dark:text-slate-200 font-medium hover:bg-slate-100 dark:hover:bg-slate-800">Muatan Pembelajaran</a>
+      <a href="#osis" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-slate-700 dark:text-slate-200 font-medium hover:bg-slate-100 dark:hover:bg-slate-800">OSIS (10 Bidang)</a>
+      <a href="#mpk" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-slate-700 dark:text-slate-200 font-medium hover:bg-slate-100 dark:hover:bg-slate-800">MPK</a>
+      <a href="#alur-kerja" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-slate-700 dark:text-slate-200 font-medium hover:bg-slate-100 dark:hover:bg-slate-800">Alur Kerja Organisasi</a>
+      <a href="#ice-breaking" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-emerald-600 dark:text-emerald-400 font-semibold hover:bg-emerald-50 dark:hover:bg-emerald-950">Ice Breaking & Kuis</a>
+      <a href="#narasumber" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-slate-700 dark:text-slate-200 font-medium hover:bg-slate-100 dark:hover:bg-slate-800">Narasumber</a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden bg-gradient-to-b from-blue-50/70 via-slate-50 to-white dark:from-slate-900 dark:via-slate-900 dark:to-slate-950">
+    <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Hero Content -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 text-xs font-bold uppercase tracking-wider border border-blue-200 dark:border-blue-800">
+            <i class="fa-solid fa-graduation-cap"></i> Media Pembelajaran Digital LDKS
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
+            STRUKTUR DAN <span class="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">MANAJEMEN ORGANISASI</span>
+          </h1>
+
+          <p class="text-base sm:text-lg font-medium text-slate-600 dark:text-slate-300">
+            LDKS OSIS-MPK MASA BHAKTI 2026/2027<br>
+            <span class="font-semibold text-blue-700 dark:text-blue-400">SMA Negeri 1 Pagerbarang</span>
+          </p>
+
+          <p class="text-sm sm:text-base text-slate-500 dark:text-slate-400 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            Panduan komprehensif bagi calon pengurus OSIS dan MPK untuk memahami dasar hukum kesiswaan, tata kelola organisasi, muatan pembelajaran, serta alur kerja resmi sekolah guna mewujudkan kepemimpinan siswa yang berkarakter, solutif, dan berintegritas.
+          </p>
+
+          <!-- Speaker Badge Info -->
+          <div class="p-4 rounded-2xl bg-white dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700 shadow-sm flex items-center gap-4 max-w-md mx-auto lg:mx-0">
+            <div class="w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-lg shadow">
+              FA
+            </div>
+            <div class="text-left">
+              <div class="text-xs text-slate-400 uppercase tracking-wide font-semibold">Narasumber Pembawa Materi</div>
+              <div class="font-bold text-slate-900 dark:text-white text-base">M. FAISAL ABDUH, M.Pd.</div>
+              <div class="text-xs text-blue-600 dark:text-blue-400 font-medium">Guru Matematika SMA Negeri 1 Kersana</div>
+            </div>
+          </div>
+
+          <!-- Buttons CTA -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-2">
+            <a href="#dasar-hukum" class="px-6 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm shadow-lg shadow-blue-500/20 hover:scale-105 transition">
+              <i class="fa-solid fa-book-open mr-2"></i> Mulai Materi
+            </a>
+            <a href="#osis" class="px-6 py-3.5 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-800 dark:text-white border border-slate-300 dark:border-slate-600 font-bold text-sm transition">
+              <i class="fa-solid fa-users mr-2"></i> Pelajari OSIS
+            </a>
+            <a href="#mpk" class="px-6 py-3.5 rounded-xl bg-indigo-50 dark:bg-indigo-950/50 hover:bg-indigo-100 text-indigo-700 dark:text-indigo-300 font-bold text-sm transition">
+              <i class="fa-solid fa-layer-group mr-2"></i> Kenali Fungsi MPK
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Visual Showcase / Learning Journey -->
+        <div class="lg:col-span-5">
+          <div class="bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-8 shadow-xl border border-slate-200 dark:border-slate-700 relative">
+            <div class="flex items-center justify-between pb-4 border-b border-slate-100 dark:border-slate-700 mb-6">
+              <div class="font-bold text-slate-900 dark:text-white text-sm flex items-center gap-2">
+                <i class="fa-solid fa-route text-blue-600"></i> Alur Pembelajaran LDKS
+              </div>
+              <span class="text-xs font-bold text-emerald-600 bg-emerald-50 dark:bg-emerald-950/60 px-2.5 py-1 rounded-full">
+                7 Tahap Pembelajaran
+              </span>
+            </div>
+
+            <!-- Learning Journey Steps Interactive List -->
+            <div class="space-y-3">
+              <a href="#dasar-hukum" class="flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50 dark:hover:bg-slate-700/50 transition border border-transparent hover:border-blue-200 group">
+                <span class="w-8 h-8 rounded-lg bg-blue-100 dark:bg-blue-900/60 text-blue-600 dark:text-blue-300 font-bold flex items-center justify-center text-xs group-hover:scale-110 transition">01</span>
+                <div class="flex-1">
+                  <div class="text-xs font-bold text-slate-800 dark:text-slate-200">Dasar Hukum</div>
+                  <div class="text-[11px] text-slate-500">5 Regulasi Pembinaan Kesiswaan</div>
+                </div>
+                <span class="text-xs text-blue-600 font-bold opacity-0 group-hover:opacity-100 transition">Pelajari <i class="fa-solid fa-chevron-right text-[10px]"></i></span>
+              </a>
+
+              <a href="#pembina" class="flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50 dark:hover:bg-slate-700/50 transition border border-transparent hover:border-blue-200 group">
+                <span class="w-8 h-8 rounded-lg bg-indigo-100 dark:bg-indigo-900/60 text-indigo-600 dark:text-indigo-300 font-bold flex items-center justify-center text-xs group-hover:scale-110 transition">02</span>
+                <div class="flex-1">
+                  <div class="text-xs font-bold text-slate-800 dark:text-slate-200">Pembina Kesiswaan</div>
+                  <div class="text-[11px] text-slate-500">Struktur Pendamping Kesiswaan</div>
+                </div>
+                <span class="text-xs text-indigo-600 font-bold opacity-0 group-hover:opacity-100 transition">Kenali <i class="fa-solid fa-chevron-right text-[10px]"></i></span>
+              </a>
+
+              <a href="#muatan" class="flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50 dark:hover:bg-slate-700/50 transition border border-transparent hover:border-blue-200 group">
+                <span class="w-8 h-8 rounded-lg bg-purple-100 dark:bg-purple-900/60 text-purple-600 dark:text-purple-300 font-bold flex items-center justify-center text-xs group-hover:scale-110 transition">03</span>
+                <div class="flex-1">
+                  <div class="text-xs font-bold text-slate-800 dark:text-slate-200">Muatan Pembelajaran</div>
+                  <div class="text-[11px] text-slate-500">Intra, Koku, & Ekstrakurikuler</div>
+                </div>
+                <span class="text-xs text-purple-600 font-bold opacity-0 group-hover:opacity-100 transition">Pahami <i class="fa-solid fa-chevron-right text-[10px]"></i></span>
+              </a>
+
+              <a href="#osis" class="flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50 dark:hover:bg-slate-700/50 transition border border-transparent hover:border-blue-200 group">
+                <span class="w-8 h-8 rounded-lg bg-emerald-100 dark:bg-emerald-900/60 text-emerald-600 dark:text-emerald-300 font-bold flex items-center justify-center text-xs group-hover:scale-110 transition">04</span>
+                <div class="flex-1">
+                  <div class="text-xs font-bold text-slate-800 dark:text-slate-200">Organisasi OSIS</div>
+                  <div class="text-[11px] text-slate-500">Fungsi Utama & 10 Bidang Pembinaan</div>
+                </div>
+                <span class="text-xs text-emerald-600 font-bold opacity-0 group-hover:opacity-100 transition">Jelajahi <i class="fa-solid fa-chevron-right text-[10px]"></i></span>
+              </a>
+
+              <a href="#mpk" class="flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50 dark:hover:bg-slate-700/50 transition border border-transparent hover:border-blue-200 group">
+                <span class="w-8 h-8 rounded-lg bg-amber-100 dark:bg-amber-900/60 text-amber-600 dark:text-amber-300 font-bold flex items-center justify-center text-xs group-hover:scale-110 transition">05</span>
+                <div class="flex-1">
+                  <div class="text-xs font-bold text-slate-800 dark:text-slate-200">Majelis Perwakilan Kelas</div>
+                  <div class="text-[11px] text-slate-500">5 Fungsi MPK & Alur Aspirasi Siswa</div>
+                </div>
+                <span class="text-xs text-amber-600 font-bold opacity-0 group-hover:opacity-100 transition">Simulasi <i class="fa-solid fa-chevron-right text-[10px]"></i></span>
+              </a>
+
+              <a href="#alur-kerja" class="flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50 dark:hover:bg-slate-700/50 transition border border-transparent hover:border-blue-200 group">
+                <span class="w-8 h-8 rounded-lg bg-rose-100 dark:bg-rose-900/60 text-rose-600 dark:text-rose-300 font-bold flex items-center justify-center text-xs group-hover:scale-110 transition">06</span>
+                <div class="flex-1">
+                  <div class="text-xs font-bold text-slate-800 dark:text-slate-200">Alur Kerja Organisasi</div>
+                  <div class="text-[11px] text-slate-500">6 Tahap Pengajuan Program Kerja</div>
+                </div>
+                <span class="text-xs text-rose-600 font-bold opacity-0 group-hover:opacity-100 transition">Praktikkan <i class="fa-solid fa-chevron-right text-[10px]"></i></span>
+              </a>
+
+              <a href="#ice-breaking" class="flex items-center gap-3 p-3 rounded-xl hover:bg-emerald-100/50 dark:hover:bg-emerald-950/50 transition border border-emerald-200 dark:border-emerald-800 group bg-emerald-50/50 dark:bg-emerald-950/20">
+                <span class="w-8 h-8 rounded-lg bg-emerald-600 text-white font-bold flex items-center justify-center text-xs group-hover:scale-110 transition">07</span>
+                <div class="flex-1">
+                  <div class="text-xs font-bold text-emerald-900 dark:text-emerald-300">Ice Breaking & Kuis</div>
+                  <div class="text-[11px] text-emerald-600 dark:text-emerald-400">Game Kepemimpinan & Kuis 10 Bidang</div>
+                </div>
+                <span class="text-xs text-emerald-600 font-bold">Uji Pemahaman <i class="fa-solid fa-gamepad text-xs"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION DASAR HUKUM -->
+  <section id="dasar-hukum" class="py-16 md:py-24 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 text-xs font-bold uppercase tracking-wider">
+          <i class="fa-solid fa-scale-balanced mr-1"></i> Landasan Yuridis
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-3 mb-4">
+          DASAR HUKUM PEMBINAAN KESISWAAN
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400">
+          Landasan regulasi nasional yang menjadi acuan legalitas dan pedoman pelaksanaan seluruh aktivitas OSIS, MPK, dan Ekstrakurikuler di sekolah.
+        </p>
+      </div>
+
+      <!-- 5 Cards Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Card 1 -->
+        <div class="bg-slate-50 dark:bg-slate-800/60 p-6 rounded-2xl border border-slate-200 dark:border-slate-700 hover:border-blue-500 hover:shadow-lg transition group">
+          <div class="flex items-center justify-between mb-4">
+            <span class="w-10 h-10 rounded-xl bg-blue-600 text-white font-extrabold flex items-center justify-center text-sm shadow">
+              01
+            </span>
+            <i class="fa-solid fa-book-bookmark text-2xl text-blue-500/40 group-hover:text-blue-600 transition"></i>
+          </div>
+          <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2 leading-snug">
+            UU No. 20 Tahun 2003
+          </h3>
+          <p class="text-xs font-semibold text-blue-600 dark:text-blue-400 mb-3">
+            tentang Sistem Pendidikan Nasional
+          </p>
+          <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+            Menjadi acuan utama penyelenggaraan pendidikan nasional dalam mengembangkan potensi peserta didik agar menjadi manusia yang beriman, bertakwa, berakhlak mulia, sehat, berilmu, cakap, kreatif, mandiri, dan menjadi warga negara yang demokratis serta bertanggung jawab.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-slate-50 dark:bg-slate-800/60 p-6 rounded-2xl border border-slate-200 dark:border-slate-700 hover:border-indigo-500 hover:shadow-lg transition group">
+          <div class="flex items-center justify-between mb-4">
+            <span class="w-10 h-10 rounded-xl bg-indigo-600 text-white font-extrabold flex items-center justify-center text-sm shadow">
+              02
+            </span>
+            <i class="fa-solid fa-award text-2xl text-indigo-500/40 group-hover:text-indigo-600 transition"></i>
+          </div>
+          <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2 leading-snug">
+            Peraturan Presiden No. 87 Tahun 2017
+          </h3>
+          <p class="text-xs font-semibold text-indigo-600 dark:text-indigo-400 mb-3">
+            tentang Penguatan Pendidikan Karakter
+          </p>
+          <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+            Mengarahkan pembinaan siswa untuk membudayakan nilai-nilai utama karakter: religius, nasionalis, mandiri, gotong royong, dan integritas melalui kegiatan intrakurikuler, kokurikuler, dan ekstrakurikuler.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-slate-50 dark:bg-slate-800/60 p-6 rounded-2xl border border-slate-200 dark:border-slate-700 hover:border-purple-500 hover:shadow-lg transition group">
+          <div class="flex items-center justify-between mb-4">
+            <span class="w-10 h-10 rounded-xl bg-purple-600 text-white font-extrabold flex items-center justify-center text-sm shadow">
+              03
+            </span>
+            <i class="fa-solid fa-users-gear text-2xl text-purple-500/40 group-hover:text-purple-600 transition"></i>
+          </div>
+          <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2 leading-snug">
+            Permendiknas No. 39 Tahun 2008
+          </h3>
+          <p class="text-xs font-semibold text-purple-600 dark:text-purple-400 mb-3">
+            tentang Pembinaan Kesiswaan
+          </p>
+          <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+            Regulasi khusus yang mengatur tujuan, materi, dan jalur pembinaan kesiswaan di sekolah melalui wadah OSIS untuk mengembangkan potensi, bakat, minat, dan kepemimpinan siswa.
+          </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-slate-50 dark:bg-slate-800/60 p-6 rounded-2xl border border-slate-200 dark:border-slate-700 hover:border-emerald-500 hover:shadow-lg transition group">
+          <div class="flex items-center justify-between mb-4">
+            <span class="w-10 h-10 rounded-xl bg-emerald-600 text-white font-extrabold flex items-center justify-center text-sm shadow">
+              04
+            </span>
+            <i class="fa-solid fa-shapes text-2xl text-emerald-500/40 group-hover:text-emerald-600 transition"></i>
+          </div>
+          <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2 leading-snug">
+            Permendikbud No. 62 Tahun 2014
+          </h3>
+          <p class="text-xs font-semibold text-emerald-600 dark:text-emerald-400 mb-3">
+            tentang Kegiatan Ekstrakurikuler
+          </p>
+          <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+            Menjadi pedoman pelaksanaan kegiatan ekstrakurikuler sebagai wadah pengembangan karakter, potensi, dan bakat siswa di luar jam tatap muka terjadwal.
+          </p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="bg-slate-50 dark:bg-slate-800/60 p-6 rounded-2xl border border-slate-200 dark:border-slate-700 hover:border-amber-500 hover:shadow-lg transition group lg:col-span-2">
+          <div class="flex items-center justify-between mb-4">
+            <span class="w-10 h-10 rounded-xl bg-amber-600 text-white font-extrabold flex items-center justify-center text-sm shadow">
+              05
+            </span>
+            <i class="fa-solid fa-heart-pulse text-2xl text-amber-500/40 group-hover:text-amber-600 transition"></i>
+          </div>
+          <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2 leading-snug">
+            Permendikbud No. 23 Tahun 2015
+          </h3>
+          <p class="text-xs font-semibold text-amber-600 dark:text-amber-400 mb-3">
+            tentang Penumbuhan Budi Pekerti
+          </p>
+          <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+            Panduan aktivitas pembiasaan baik harian, mingguan, dan berkala di sekolah untuk membangun ekosistem sekolah yang menyenangkan, aman, dan berkarakter positif bagi seluruh warga sekolah.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION PEMBINA KESISWAAN -->
+  <section id="pembina" class="py-16 md:py-24 bg-slate-100 dark:bg-slate-950/80 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="px-3 py-1 rounded-full bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 text-xs font-bold uppercase tracking-wider">
+          <i class="fa-solid fa-user-shield mr-1"></i> Tim Pendamping
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-3 mb-4">
+          PEMBINA KESISWAAN
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400">
+          Tim Pimpinan dan Pembina Kesiswaan SMA Negeri 1 Pagerbarang yang bertugas memfasilitasi, membimbing, serta mengawasi seluruh program kerja OSIS dan MPK.
+        </p>
+      </div>
+
+      <!-- 4 Profiles Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Profile 1 -->
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 text-center border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition group">
+          <div class="w-20 h-20 mx-auto rounded-full bg-gradient-to-tr from-blue-600 to-indigo-600 text-white flex items-center justify-center font-extrabold text-2xl shadow-lg mb-4 group-hover:scale-105 transition">
+            NS
+          </div>
+          <h3 class="text-base font-bold text-slate-900 dark:text-white leading-snug">
+            NURFADJAR SULISTIJO, S.Pd.
+          </h3>
+          <p class="text-xs font-bold text-blue-600 dark:text-blue-400 mt-2 bg-blue-50 dark:bg-blue-950/60 py-1 px-3 rounded-full inline-block">
+            Waka Kesiswaan
+          </p>
+          <div class="mt-4 pt-4 border-t border-slate-100 dark:border-slate-700 text-xs text-slate-500 dark:text-slate-400">
+            Pimpinan Utama Bidang Pembinaan & Pengawasan Kesiswaan
+          </div>
+        </div>
+
+        <!-- Profile 2 -->
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 text-center border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition group">
+          <div class="w-20 h-20 mx-auto rounded-full bg-gradient-to-tr from-indigo-600 to-purple-600 text-white flex items-center justify-center font-extrabold text-2xl shadow-lg mb-4 group-hover:scale-105 transition">
+            ES
+          </div>
+          <h3 class="text-base font-bold text-slate-900 dark:text-white leading-snug">
+            EDI SANTOSO, S.Pd.
+          </h3>
+          <p class="text-xs font-bold text-indigo-600 dark:text-indigo-400 mt-2 bg-indigo-50 dark:bg-indigo-950/60 py-1 px-3 rounded-full inline-block">
+            Pendamping Waka Kesiswaan
+          </p>
+          <div class="mt-4 pt-4 border-t border-slate-100 dark:border-slate-700 text-xs text-slate-500 dark:text-slate-400">
+            Pendamping Manajemen & Operasional Kegiatan Kesiswaan
+          </div>
+        </div>
+
+        <!-- Profile 3 -->
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 text-center border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition group">
+          <div class="w-20 h-20 mx-auto rounded-full bg-gradient-to-tr from-purple-600 to-pink-600 text-white flex items-center justify-center font-extrabold text-2xl shadow-lg mb-4 group-hover:scale-105 transition">
+            IY
+          </div>
+          <h3 class="text-base font-bold text-slate-900 dark:text-white leading-snug">
+            IDA YUNIAR TRYASTUTI, S.Pd.
+          </h3>
+          <p class="text-xs font-bold text-purple-600 dark:text-purple-400 mt-2 bg-purple-50 dark:bg-purple-950/60 py-1 px-3 rounded-full inline-block">
+            Pendamping Waka Kesiswaan
+          </p>
+          <div class="mt-4 pt-4 border-t border-slate-100 dark:border-slate-700 text-xs text-slate-500 dark:text-slate-400">
+            Pendamping Administrasi & Karakter Peserta Didik
+          </div>
+        </div>
+
+        <!-- Profile 4 -->
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 text-center border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition group">
+          <div class="w-20 h-20 mx-auto rounded-full bg-gradient-to-tr from-emerald-600 to-teal-600 text-white flex items-center justify-center font-extrabold text-2xl shadow-lg mb-4 group-hover:scale-105 transition">
+            RD
+          </div>
+          <h3 class="text-base font-bold text-slate-900 dark:text-white leading-snug">
+            RIZKI DIANA, S.Pd.
+          </h3>
+          <p class="text-xs font-bold text-emerald-600 dark:text-emerald-400 mt-2 bg-emerald-50 dark:bg-emerald-950/60 py-1 px-3 rounded-full inline-block">
+            Pendamping Waka Kesiswaan
+          </p>
+          <div class="mt-4 pt-4 border-t border-slate-100 dark:border-slate-700 text-xs text-slate-500 dark:text-slate-400">
+            Pendamping Program Ekstrakurikuler & Organisasi Siswa
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION MUATAN PEMBELAJARAN -->
+  <section id="muatan" class="py-16 md:py-24 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="px-3 py-1 rounded-full bg-purple-100 dark:bg-purple-900/50 text-purple-700 dark:text-purple-300 text-xs font-bold uppercase tracking-wider">
+          <i class="fa-solid fa-cubes mr-1"></i> Trilogi Pembelajaran
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-3 mb-4">
+          MUATAN PEMBELAJARAN
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400">
+          Struktur muatan kegiatan siswa di SMA Negeri 1 Pagerbarang yang saling terintegrasi dalam membentuk kompetensi dan karakter utuh.
+        </p>
+      </div>
+
+      <!-- Visual Flow Chart Diagram -->
+      <div class="mb-12 p-6 rounded-2xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 dark:from-slate-800 dark:via-slate-800/80 dark:to-slate-800 border border-slate-200 dark:border-slate-700 hidden md:block">
+        <div class="flex items-center justify-between gap-4 text-center">
+          
+          <div class="flex-1 p-4 rounded-xl bg-white dark:bg-slate-900 shadow-sm border border-blue-200 dark:border-blue-900">
+            <i class="fa-solid fa-book text-2xl text-blue-600 mb-2"></i>
+            <div class="font-bold text-sm text-slate-900 dark:text-white">1. INTRAKURIKULER</div>
+            <div class="text-[11px] text-slate-500">Jadwal & Struktur Kurikulum Formal</div>
+          </div>
+
+          <i class="fa-solid fa-arrow-right text-slate-400 text-xl"></i>
+
+          <div class="flex-1 p-4 rounded-xl bg-white dark:bg-slate-900 shadow-sm border border-indigo-200 dark:border-indigo-900">
+            <i class="fa-solid fa-brain text-2xl text-indigo-600 mb-2"></i>
+            <div class="font-bold text-sm text-slate-900 dark:text-white">2. KOKURIKULER</div>
+            <div class="text-[11px] text-slate-500">Penguatan & Pendalaman Pembelajaran</div>
+          </div>
+
+          <i class="fa-solid fa-arrow-right text-slate-400 text-xl"></i>
+
+          <div class="flex-1 p-4 rounded-xl bg-white dark:bg-slate-900 shadow-sm border border-purple-200 dark:border-purple-900">
+            <i class="fa-solid fa-person-hiking text-2xl text-purple-600 mb-2"></i>
+            <div class="font-bold text-sm text-slate-900 dark:text-white">3. EKSTRAKURIKULER</div>
+            <div class="text-[11px] text-slate-500">Pengembangan Bakat, Minat & OSIS</div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 3 Detail Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Intrakurikuler -->
+        <div class="bg-slate-50 dark:bg-slate-800/60 rounded-2xl p-6 border-t-4 border-blue-600 border-x border-b border-slate-200 dark:border-slate-700 shadow-sm">
+          <div class="w-12 h-12 rounded-xl bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-300 flex items-center justify-center font-bold text-xl mb-4">
+            <i class="fa-solid fa-book-open"></i>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">
+            INTRAKURIKULER
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+            Kegiatan pembelajaran untuk mencapai tujuan belajar sesuai jadwal dan beban belajar pada struktur Kurikulum.
+          </p>
+        </div>
+
+        <!-- Kokurikuler -->
+        <div class="bg-slate-50 dark:bg-slate-800/60 rounded-2xl p-6 border-t-4 border-indigo-600 border-x border-b border-slate-200 dark:border-slate-700 shadow-sm">
+          <div class="w-12 h-12 rounded-xl bg-indigo-100 dark:bg-indigo-900/50 text-indigo-600 dark:text-indigo-300 flex items-center justify-center font-bold text-xl mb-4">
+            <i class="fa-solid fa-puzzle-piece"></i>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">
+            KOKURIKULER
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+            Kegiatan pembelajaran yang dilaksanakan untuk penguatan, pendalaman, dan/atau pengayaan kegiatan Intrakurikuler dalam rangka pengembangan karakter dan kompetensi peserta didik.
+          </p>
+        </div>
+
+        <!-- Ekstrakurikuler -->
+        <div class="bg-slate-50 dark:bg-slate-800/60 rounded-2xl p-6 border-t-4 border-purple-600 border-x border-b border-slate-200 dark:border-slate-700 shadow-sm">
+          <div class="w-12 h-12 rounded-xl bg-purple-100 dark:bg-purple-900/50 text-purple-600 dark:text-purple-300 flex items-center justify-center font-bold text-xl mb-4">
+            <i class="fa-solid fa-hands-holding-circle"></i>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">
+            EKSTRAKURIKULER
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+            Kegiatan pengembangan karakter dalam rangka perluasan potensi, bakat, minat, kemampuan, kepribadian, kerja sama, dan kemandirian peserta didik secara optimal yang dilakukan dengan bimbingan dan pengawasan sekolah.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION OSIS -->
+  <section id="osis" class="py-16 md:py-24 bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 text-xs font-bold uppercase tracking-wider">
+          <i class="fa-solid fa-sitemap mr-1"></i> Organisasi Utama Siswa
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-3 mb-4">
+          ORGANISASI SISWA INTRA SEKOLAH (OSIS)
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400">
+          Satu-satunya wadah organisasi siswa yang sah di sekolah. OSIS menjadi motor penggerak kegiatan kesiswaan serta sarana latihan kepemimpinan.
+        </p>
+      </div>
+
+      <!-- 3 Peran / Fungsi Utama OSIS -->
+      <div class="mb-16">
+        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-6 text-center">
+          3 FUNGSI / PERAN UTAMA OSIS
+        </h3>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition">
+            <div class="w-12 h-12 rounded-xl bg-blue-600 text-white flex items-center justify-center text-xl font-bold mb-4 shadow">
+              1
+            </div>
+            <h4 class="font-bold text-slate-900 dark:text-white text-base mb-2">
+              Wadah Organisasi Siswa Intra Sekolah
+            </h4>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+              OSIS menjadi wadah organisasi bagi para siswa dalam melakukan kegiatan bersama, bertukar ilmu, bertukar pikiran, dan mengeluarkan pendapat untuk mencapai tujuan dan cita-cita bersama.
+            </p>
+          </div>
+
+          <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition">
+            <div class="w-12 h-12 rounded-xl bg-indigo-600 text-white flex items-center justify-center text-xl font-bold mb-4 shadow">
+              2
+            </div>
+            <h4 class="font-bold text-slate-900 dark:text-white text-base mb-2">
+              Penggerak / Motivator
+            </h4>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+              OSIS menjadi motivator yang mampu memengaruhi semangat para siswa untuk berbuat dan melakukan kegiatan bersama-sama dalam mencapai tujuan yang lebih baik dan produktif.
+            </p>
+          </div>
+
+          <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition">
+            <div class="w-12 h-12 rounded-xl bg-purple-600 text-white flex items-center justify-center text-xl font-bold mb-4 shadow">
+              3
+            </div>
+            <h4 class="font-bold text-slate-900 dark:text-white text-base mb-2">
+              Pembinaan Siswa
+            </h4>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+              OSIS merupakan jalur pembinaan yang memberi bekal pengetahuan dan pengalaman kepada siswa untuk memimpin dirinya, orang lain, dan lingkungannya dalam mengikuti kegiatan sekolah.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 10 BIDANG PEMBINAAN INTERACTIVE CHART -->
+      <div class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-xl">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white mb-2">
+            STRUKTUR 10 BIDANG PEMBINAAN OSIS
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400">
+            Klik pada salah satu kartu bidang di bawah ini untuk melihat ruang lingkup dan contoh kegiatan resminya.
+          </p>
+        </div>
+
+        <!-- Grid 10 Bidang -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4" id="bidangGrid">
+          <!-- Dynamically populated by JS or Static Markup with Modal trigger -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MODAL UNTUK DETAIL BIDANG OSIS -->
+  <div id="bidangModal" class="fixed inset-0 z-50 hidden bg-slate-900/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white dark:bg-slate-800 rounded-3xl max-w-xl w-full p-6 sm:p-8 border border-slate-200 dark:border-slate-700 shadow-2xl relative transform transition-all">
+      <button onclick="closeBidangModal()" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-500 dark:text-slate-300 flex items-center justify-center hover:bg-slate-200 dark:hover:bg-slate-600 transition">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+
+      <div class="flex items-center gap-3 mb-4">
+        <span id="modalBidangNum" class="w-10 h-10 rounded-xl bg-blue-600 text-white font-extrabold flex items-center justify-center text-sm">
+          01
+        </span>
+        <div class="text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider">
+          Seksi / Bidang Pembinaan OSIS
+        </div>
+      </div>
+
+      <h3 id="modalBidangTitle" class="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white mb-4 leading-snug">
+        Nama Bidang OSIS
+      </h3>
+
+      <div class="space-y-4 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+        <div>
+          <span class="font-bold text-slate-900 dark:text-white block mb-1">
+            <i class="fa-solid fa-bullseye text-blue-500 mr-1"></i> Ruang Lingkup & Fokus Pembinaan:
+          </span>
+          <p id="modalBidangFocus" class="leading-relaxed bg-slate-50 dark:bg-slate-900/50 p-3 rounded-xl border border-slate-100 dark:border-slate-800">
+            Deskripsi fokus bidang.
+          </p>
+        </div>
+
+        <div>
+          <span class="font-bold text-slate-900 dark:text-white block mb-1">
+            <i class="fa-solid fa-list-check text-emerald-500 mr-1"></i> Contoh Program & Kegiatan:
+          </span>
+          <ul id="modalBidangExamples" class="list-disc list-inside space-y-1.5 bg-slate-50 dark:bg-slate-900/50 p-3 rounded-xl border border-slate-100 dark:border-slate-800">
+            <!-- Items populated by JS -->
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-700 text-right">
+        <button onclick="closeBidangModal()" class="px-5 py-2.5 rounded-xl bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 text-xs font-bold hover:opacity-90 transition">
+          Tutup
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION MPK -->
+  <section id="mpk" class="py-16 md:py-24 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="px-3 py-1 rounded-full bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300 text-xs font-bold uppercase tracking-wider">
+          <i class="fa-solid fa-layer-group mr-1"></i> Pengawasan & Aspirasi
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-3 mb-4">
+          MAJELIS PERWAKILAN KELAS (MPK)
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400">
+          Lembaga perwakilan siswa yang memiliki peran strategis dalam menampung aspirasi, mengawasi kinerja OSIS, serta menjadi mediator antara siswa dan sekolah.
+        </p>
+      </div>
+
+      <!-- 5 Fungsi MPK Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-16">
+        
+        <div class="bg-amber-50/50 dark:bg-slate-800/80 p-5 rounded-2xl border border-amber-200 dark:border-amber-900/50 text-center hover:scale-105 transition">
+          <div class="w-10 h-10 mx-auto rounded-full bg-amber-600 text-white font-bold flex items-center justify-center text-sm mb-3">
+            01
+          </div>
+          <h4 class="font-bold text-slate-900 dark:text-white text-sm mb-1">
+            Mengawasi Kinerja OSIS
+          </h4>
+          <p class="text-xs text-slate-500 dark:text-slate-400">
+            Memantau keterlaksanaan program kerja OSIS.
+          </p>
+        </div>
+
+        <div class="bg-amber-50/50 dark:bg-slate-800/80 p-5 rounded-2xl border border-amber-200 dark:border-amber-900/50 text-center hover:scale-105 transition">
+          <div class="w-10 h-10 mx-auto rounded-full bg-amber-600 text-white font-bold flex items-center justify-center text-sm mb-3">
+            02
+          </div>
+          <h4 class="font-bold text-slate-900 dark:text-white text-sm mb-1">
+            Menyalurkan Aspirasi
+          </h4>
+          <p class="text-xs text-slate-500 dark:text-slate-400">
+            Menampung masukan & saran seluruh siswa kelas.
+          </p>
+        </div>
+
+        <div class="bg-amber-50/50 dark:bg-slate-800/80 p-5 rounded-2xl border border-amber-200 dark:border-amber-900/50 text-center hover:scale-105 transition">
+          <div class="w-10 h-10 mx-auto rounded-full bg-amber-600 text-white font-bold flex items-center justify-center text-sm mb-3">
+            03
+          </div>
+          <h4 class="font-bold text-slate-900 dark:text-white text-sm mb-1">
+            Pengambilan Keputusan
+          </h4>
+          <p class="text-xs text-slate-500 dark:text-slate-400">
+            Membantu merumuskan kebijakan siswa.
+          </p>
+        </div>
+
+        <div class="bg-amber-50/50 dark:bg-slate-800/80 p-5 rounded-2xl border border-amber-200 dark:border-amber-900/50 text-center hover:scale-105 transition">
+          <div class="w-10 h-10 mx-auto rounded-full bg-amber-600 text-white font-bold flex items-center justify-center text-sm mb-3">
+            04
+          </div>
+          <h4 class="font-bold text-slate-900 dark:text-white text-sm mb-1">
+            Meningkatkan Partisipasi
+          </h4>
+          <p class="text-xs text-slate-500 dark:text-slate-400">
+            Mendorong keterlibatan aktif siswa.
+          </p>
+        </div>
+
+        <div class="bg-amber-50/50 dark:bg-slate-800/80 p-5 rounded-2xl border border-amber-200 dark:border-amber-900/50 text-center hover:scale-105 transition sm:col-span-2 lg:col-span-1">
+          <div class="w-10 h-10 mx-auto rounded-full bg-amber-600 text-white font-bold flex items-center justify-center text-sm mb-3">
+            05
+          </div>
+          <h4 class="font-bold text-slate-900 dark:text-white text-sm mb-1">
+            Sebagai Mediator
+          </h4>
+          <p class="text-xs text-slate-500 dark:text-slate-400">
+            Jembatan komunikasi siswa & sekolah.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Interactive Flow Graph Siswa -> MPK -> OSIS -> Sekolah -->
+      <div class="bg-slate-50 dark:bg-slate-800/60 p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-slate-700">
+        <h3 class="text-center font-bold text-slate-900 dark:text-white text-base mb-6">
+          <i class="fa-solid fa-arrows-split-up-and-left text-amber-500 mr-2"></i> ALUR HUBUNGAN & ASPIRASI ORGANISASI
+        </h3>
+
+        <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 text-center relative">
+          
+          <div class="p-4 rounded-xl bg-white dark:bg-slate-900 shadow-sm border border-slate-200 dark:border-slate-700">
+            <div class="w-10 h-10 mx-auto rounded-full bg-blue-100 dark:bg-blue-900/50 text-blue-600 flex items-center justify-center text-lg mb-2">
+              <i class="fa-solid fa-user-group"></i>
+            </div>
+            <div class="font-extrabold text-sm text-slate-900 dark:text-white">SISWA</div>
+            <div class="text-[11px] text-slate-500 mt-1">Sumber Aspirasi & Masukan</div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-white dark:bg-slate-900 shadow-sm border border-amber-300 dark:border-amber-700">
+            <div class="w-10 h-10 mx-auto rounded-full bg-amber-100 dark:bg-amber-900/50 text-amber-600 flex items-center justify-center text-lg mb-2">
+              <i class="fa-solid fa-hands-asymmetric"></i>
+            </div>
+            <div class="font-extrabold text-sm text-slate-900 dark:text-white">MPK</div>
+            <div class="text-[11px] text-slate-500 mt-1">Pengawas & Penyalur Aspirasi</div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-white dark:bg-slate-900 shadow-sm border border-emerald-300 dark:border-emerald-700">
+            <div class="w-10 h-10 mx-auto rounded-full bg-emerald-100 dark:bg-emerald-900/50 text-emerald-600 flex items-center justify-center text-lg mb-2">
+              <i class="fa-solid fa-sitemap"></i>
+            </div>
+            <div class="font-extrabold text-sm text-slate-900 dark:text-white">OSIS</div>
+            <div class="text-[11px] text-slate-500 mt-1">Pelaksana Program Kerja</div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-white dark:bg-slate-900 shadow-sm border border-indigo-300 dark:border-indigo-700">
+            <div class="w-10 h-10 mx-auto rounded-full bg-indigo-100 dark:bg-indigo-900/50 text-indigo-600 flex items-center justify-center text-lg mb-2">
+              <i class="fa-solid fa-school"></i>
+            </div>
+            <div class="font-extrabold text-sm text-slate-900 dark:text-white">SEKOLAH</div>
+            <div class="text-[11px] text-slate-500 mt-1">Pimpinan & Penanggung Jawab</div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION ALUR KERJA ORGANISASI -->
+  <section id="alur-kerja" class="py-16 md:py-24 bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="px-3 py-1 rounded-full bg-rose-100 dark:bg-rose-900/50 text-rose-700 dark:text-rose-300 text-xs font-bold uppercase tracking-wider">
+          <i class="fa-solid fa-diagram-project mr-1"></i> Standar Operasional
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-3 mb-4">
+          ALUR KERJA ORGANISASI
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400">
+          Mekanisme resmi pengajuan, koordinasi, dan pertanggungjawaban kegiatan OSIS di SMA Negeri 1 Pagerbarang.
+        </p>
+      </div>
+
+      <!-- Category Filter Tab -->
+      <div class="flex justify-center mb-10">
+        <div class="bg-white dark:bg-slate-800 p-1.5 rounded-2xl border border-slate-200 dark:border-slate-700 inline-flex">
+          <button id="btnEkstra" onclick="switchAlurCategory('ekstra')" class="px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-blue-600 text-white shadow-sm transition">
+            <i class="fa-solid fa-shapes mr-1.5"></i> Program Ekstrakurikuler OSIS
+          </button>
+          <button id="btnNonEkstra" onclick="switchAlurCategory('non-ekstra')" class="px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold text-slate-600 dark:text-slate-300 hover:text-slate-900 transition">
+            <i class="fa-solid fa-star mr-1.5"></i> Program Non-Ekstrakurikuler
+          </button>
+        </div>
+      </div>
+
+      <!-- 6 Steps Interactive Timeline -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4 relative">
+        
+        <!-- Step 1 -->
+        <div class="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm relative group hover:border-blue-500 transition">
+          <span class="text-2xl font-black text-blue-600 dark:text-blue-400 block mb-2">01</span>
+          <h4 class="font-bold text-slate-900 dark:text-white text-sm mb-1">Program Kerja</h4>
+          <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed" id="step1Desc">
+            Perencanaan program dari OSIS / Ekstrakurikuler.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm relative group hover:border-blue-500 transition">
+          <span class="text-2xl font-black text-blue-600 dark:text-blue-400 block mb-2">02</span>
+          <h4 class="font-bold text-slate-900 dark:text-white text-sm mb-1">Ajukan Proposal</h4>
+          <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+            Penyusunan & pengajuan proposal kegiatan ke Pembina OSIS.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm relative group hover:border-blue-500 transition">
+          <span class="text-2xl font-black text-blue-600 dark:text-blue-400 block mb-2">03</span>
+          <h4 class="font-bold text-slate-900 dark:text-white text-sm mb-1">Rapat Waka Kesiswaan</h4>
+          <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+            Koordinasi dan verifikasi teknis bersama Tim Kesiswaan.
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm relative group hover:border-blue-500 transition">
+          <span class="text-2xl font-black text-blue-600 dark:text-blue-400 block mb-2">04</span>
+          <h4 class="font-bold text-slate-900 dark:text-white text-sm mb-1">Rapat Tim Manajemen</h4>
+          <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+            Persetujuan final bersama Kepala Sekolah & Manajemen.
+          </p>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm relative group hover:border-emerald-500 transition">
+          <span class="text-2xl font-black text-emerald-600 dark:text-emerald-400 block mb-2">05</span>
+          <h4 class="font-bold text-slate-900 dark:text-white text-sm mb-1">Pelaksanaan</h4>
+          <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+            Eksekusi kegiatan sesuai jadwal dan petunjuk teknis.
+          </p>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm relative group hover:border-purple-500 transition">
+          <span class="text-2xl font-black text-purple-600 dark:text-purple-400 block mb-2">06</span>
+          <h4 class="font-bold text-slate-900 dark:text-white text-sm mb-1">Laporan</h4>
+          <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+            Penyusunan & penyerahan LPJ (Laporan Pertanggungjawaban).
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Info Note Banner -->
+      <div class="mt-8 p-4 rounded-2xl bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800 flex items-center gap-3 text-xs sm:text-sm text-blue-900 dark:text-blue-300">
+        <i class="fa-solid fa-circle-info text-blue-600 text-lg"></i>
+        <span><strong>Catatan Alur Kerja:</strong> Seluruh program kegiatan OSIS & Ekstrakurikuler wajib mengikuti alur hirarki koordinasi di atas. Program tidak dapat dilaksanakan secara mandiri tanpa persetujuan Pembina dan Sekolah.</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION ICE BREAKING (GAMES & KUIS) -->
+  <section id="ice-breaking" class="py-16 md:py-24 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 text-xs font-bold uppercase tracking-wider">
+          <i class="fa-solid fa-gamepad mr-1"></i> Area Praktik & Simulasi
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-3 mb-4">
+          ICE BREAKING & UJI PEMAHAMAN LDKS
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400">
+          Uji pemahaman dan latih naluri kepemimpinan organisasi melalui Game Simulasi dan Kuis Interaktif 10 Bidang OSIS.
+        </p>
+      </div>
+
+      <!-- TAB SELECTION BUTTONS -->
+      <div class="flex justify-center mb-10">
+        <div class="bg-slate-100 dark:bg-slate-800 p-1.5 rounded-2xl border border-slate-200 dark:border-slate-700 inline-flex gap-2">
+          <button id="tabGameBtn" onclick="switchIceTab('game')" class="px-6 py-3 rounded-xl text-xs sm:text-sm font-bold bg-emerald-600 text-white shadow-md transition">
+            <i class="fa-solid fa-chess-knight mr-2"></i> Game Kepemimpinan
+          </button>
+          <button id="tabQuizBtn" onclick="switchIceTab('quiz')" class="px-6 py-3 rounded-xl text-xs sm:text-sm font-bold text-slate-600 dark:text-slate-300 hover:text-slate-900 transition">
+            <i class="fa-solid fa-clipboard-question mr-2"></i> Kuis Tebak Bidang OSIS
+          </button>
+        </div>
+      </div>
+
+      <!-- CONTAINER GAME -->
+      <div id="gameContainer" class="space-y-8">
+        
+        <!-- Game Selection Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          
+          <!-- GAME 1: SIAPA PEMIMPINNYA? -->
+          <div class="bg-slate-50 dark:bg-slate-800/80 p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-md flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-300 text-xs font-bold">
+                  Game 1 • Kepemimpinan
+                </span>
+                <i class="fa-solid fa-user-tie text-2xl text-blue-500"></i>
+              </div>
+              <h3 class="text-xl font-extrabold text-slate-900 dark:text-white mb-2">
+                Siapa Pemimpinnya?
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
+                Hadapi berbagai situasi konflik nyata dalam organisasi OSIS/MPK dan tentukan respon kepemimpinan yang paling bijak dan profesional.
+              </p>
+            </div>
+            
+            <button onclick="startGame1()" class="w-full py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm shadow-md transition flex items-center justify-center gap-2">
+              <i class="fa-solid fa-play"></i> Mainkan Game 1
+            </button>
+          </div>
+
+          <!-- GAME 2: MISI STRATEGI TIM -->
+          <div class="bg-slate-50 dark:bg-slate-800/80 p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-md flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="px-3 py-1 rounded-full bg-purple-100 dark:bg-purple-900/50 text-purple-600 dark:text-purple-300 text-xs font-bold">
+                  Game 2 • Misi Organisasi
+                </span>
+                <i class="fa-solid fa-people-group text-2xl text-purple-500"></i>
+              </div>
+              <h3 class="text-xl font-extrabold text-slate-900 dark:text-white mb-2">
+                Misi Strategi Tim
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
+                Kelola alokasi waktu, koordinasi tim, dan penyelesaian kendala teknis saat menyusun acara harian OSIS.
+              </p>
+            </div>
+
+            <button onclick="startGame2()" class="w-full py-3.5 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-bold text-sm shadow-md transition flex items-center justify-center gap-2">
+              <i class="fa-solid fa-play"></i> Mainkan Game 2
+            </button>
+          </div>
+
+        </div>
+
+        <!-- GAME PLAY AREA MODAL/BOX -->
+        <div id="gamePlayArea" class="hidden bg-slate-900 text-white p-6 sm:p-8 rounded-3xl shadow-2xl relative border border-slate-700">
+          <button onclick="closeGamePlay()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-slate-800 text-slate-300 flex items-center justify-center hover:bg-slate-700 transition">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <div id="gamePlayContent">
+            <!-- Dynamic Game Content injected by JS -->
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CONTAINER KUIS -->
+      <div id="quizContainer" class="hidden max-w-3xl mx-auto bg-slate-50 dark:bg-slate-800/90 rounded-3xl p-6 sm:p-10 border border-slate-200 dark:border-slate-700 shadow-xl">
+        
+        <!-- Quiz Header & Progress -->
+        <div class="mb-8">
+          <div class="flex items-center justify-between text-xs sm:text-sm font-bold text-slate-500 dark:text-slate-400 mb-3">
+            <span id="quizProgressText">Soal 1 dari 10</span>
+            <span id="quizScoreLive" class="text-emerald-600 dark:text-emerald-400">Skor Saat Ini: 0</span>
+          </div>
+
+          <!-- Progress Bar -->
+          <div class="w-full h-2.5 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+            <div id="quizProgressBar" class="h-full bg-emerald-500 transition-all duration-300" style="width: 10%"></div>
+          </div>
+        </div>
+
+        <!-- Quiz Question Box -->
+        <div id="quizQuestionCard" class="space-y-6">
+          <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700">
+            <span id="quizCategoryBadge" class="text-[11px] font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider block mb-1">
+              Studi Kasus Kegiatan Seksi / Bidang OSIS
+            </span>
+            <p id="quizQuestionText" class="text-base sm:text-lg font-bold text-slate-900 dark:text-white leading-relaxed">
+              Memuat soal kuis...
+            </p>
+          </div>
+
+          <!-- Options Container -->
+          <div id="quizOptionsContainer" class="space-y-3">
+            <!-- Options buttons dynamically populated by JS -->
+          </div>
+
+          <!-- Feedback Box -->
+          <div id="quizFeedbackBox" class="hidden p-4 rounded-2xl border text-xs sm:text-sm leading-relaxed">
+            <!-- Feedback JS -->
+          </div>
+
+          <!-- Next Button -->
+          <div class="flex justify-end pt-2">
+            <button id="quizNextBtn" onclick="nextQuizQuestion()" class="hidden px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-md transition">
+              Soal Selanjutnya <i class="fa-solid fa-arrow-right ml-1"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Quiz Result Box (Hidden by default) -->
+        <div id="quizResultBox" class="hidden text-center space-y-6 py-4">
+          <div class="w-20 h-20 mx-auto rounded-full bg-emerald-100 dark:bg-emerald-950/80 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-3xl font-black shadow-lg">
+            <i class="fa-solid fa-trophy"></i>
+          </div>
+
+          <div>
+            <h3 class="text-2xl font-extrabold text-slate-900 dark:text-white mb-1">
+              Hasil Kuis Tebak Bidang OSIS
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400">
+              Uji pemahaman 10 Bidang Pembinaan OSIS LDKS 2026
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 max-w-sm mx-auto">
+            <div class="text-xs text-slate-400 font-semibold uppercase tracking-wider mb-1">Skor Akhir Anda</div>
+            <div id="finalScoreVal" class="text-4xl font-extrabold text-emerald-600 dark:text-emerald-400 mb-2">100</div>
+            <div id="finalScoreBadge" class="inline-block px-4 py-1.5 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-900/60 dark:text-emerald-300">
+              Sangat Baik
+            </div>
+          </div>
+
+          <p id="finalScoreDesc" class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 max-w-md mx-auto leading-relaxed">
+            Selamat! Anda memiliki pemahaman yang sangat kuat mengenai struktur dan tugas 10 bidang OSIS.
+          </p>
+
+          <div class="flex justify-center gap-3 pt-2">
+            <button onclick="restartQuiz()" class="px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-md transition">
+              <i class="fa-solid fa-rotate-right mr-2"></i> Ulangi Kuis
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION NARASUMBER -->
+  <section id="narasumber" class="py-16 md:py-24 bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 text-xs font-bold uppercase tracking-wider">
+          <i class="fa-solid fa-user-tie mr-1"></i> Profil Pemateri
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-3 mb-4">
+          NARASUMBER PEMBAWA MATERI
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400">
+          Materi LDKS disajikan oleh pendidik profesional yang berpengalaman dalam pengelolaan kepemimpinan siswa.
+        </p>
+      </div>
+
+      <!-- Profile Card Showcase -->
+      <div class="max-w-2xl mx-auto bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-10 border border-slate-200 dark:border-slate-800 shadow-xl relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl"></div>
+
+        <div class="flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left relative z-10">
+          
+          <div class="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl bg-gradient-to-tr from-blue-700 via-indigo-600 to-blue-500 text-white flex items-center justify-center font-black text-3xl shadow-xl flex-shrink-0">
+            MFA
+          </div>
+
+          <div class="space-y-3 flex-1">
+            <span class="px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400 text-xs font-extrabold">
+              Narasumber LDKS OSIS-MPK
+            </span>
+
+            <h3 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white leading-tight">
+              M. FAISAL ABDUH, M.Pd.
+            </h3>
+
+            <div class="text-xs sm:text-sm font-semibold text-slate-600 dark:text-slate-300 space-y-1">
+              <div><i class="fa-solid fa-chalkboard-user text-blue-500 mr-2"></i> Guru Matematika SMA Negeri 1 Kersana</div>
+              <div class="text-slate-500 dark:text-slate-400"><i class="fa-solid fa-id-card text-slate-400 mr-2"></i> NIP: 199104032020121014</div>
+            </div>
+
+            <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed pt-1">
+              Aktif berkontribusi dalam pengembangan kurikulum, media pembelajaran digital, serta pembinaan organisasi dan kepemimpinan siswa di lingkungan sekolah menengah atas.
+            </p>
+
+            <div class="pt-2">
+              <a href="https://gurufa.sman1kersana.sch.id" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold shadow-md hover:scale-105 transition">
+                <i class="fa-solid fa-address-card"></i> Lihat CV Narasumber <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-900 text-white py-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-800">
+        
+        <div class="text-center md:text-left">
+          <div class="flex items-center justify-center md:justify-start gap-2 text-lg font-black tracking-tight mb-1">
+            <i class="fa-solid fa-sitemap text-blue-500"></i> LDKS OSIS-MPK 2026/2027
+          </div>
+          <div class="text-xs text-slate-400">
+            Struktur dan Manajemen Organisasi • SMA Negeri 1 Pagerbarang
+          </div>
+          <div class="text-xs text-slate-500 mt-1">
+            Narasumber: M. Faisal Abduh, M.Pd.
+          </div>
+        </div>
+
+        <!-- Back to top button -->
+        <a href="#home" class="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-bold text-slate-300 hover:text-white transition flex items-center gap-2 border border-slate-700">
+          <i class="fa-solid fa-arrow-up"></i> Kembali ke Atas
+        </a>
+
+      </div>
+
+      <div class="pt-8 text-center text-xs text-slate-500 flex flex-col sm:flex-row justify-between items-center gap-2">
+        <div>© 2026 SMA Negeri 1 Pagerbarang. All rights reserved.</div>
+        <div>Media Pembelajaran Digital Pendamping LDKS</div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- JAVASCRIPT CODE Persis Sesuai Sumber PDF -->
+  <script>
+    // DATA 10 BIDANG OSIS (SUMBER SLIDE 8)
+    const bidangData = [
+      {
+        num: "01",
+        title: "Keimanan dan Ketaqwaan terhadap Tuhan Yang Maha Esa",
+        icon: "fa-hands-praying",
+        focus: "Pembinaan mental spritual, pelaksanaan ibadah rutin, serta toleransi keagamaan di sekolah.",
+        examples: [
+          "Melaksanakan peribadatan sesuai dengan ketentuan agama masing-masing",
+          "Memperingati hari-hari besar keagamaan",
+          "Melaksanakan perbuatan amaliah sesuai dengan norma agama",
+          "Membina toleransi kehidupan antar umat beragama",
+          "Mengembangkan dan memberdayakan kegiatan keagamaan di sekolah"
+        ]
+      },
+      {
+        num: "02",
+        title: "Budi Pekerti Luhur atau Akhlak Mulia",
+        icon: "fa-heart",
+        focus: "Penumbuhan karakter positif, sopan santun, kepekaan sosial, dan kedisiplinan warga sekolah.",
+        examples: [
+          "Melaksanakan tata tertib dan kultur sekolah",
+          "Melaksanakan gotong royong dan kerja bakti (kebersihan)",
+          "Melaksanakan kegiatan 7K (Keamanan, Kebersihan, Ketertiban, Keindahan, Kekeluargaan, Kedamaian, Kerindangan)",
+          "Melaksanakan kegiatan yang menumbuhkan sikap hormat dan santun",
+          "Kegiatan yang menumbuhkan kepedulian sosial sesama warga sekolah"
+        ]
+      },
+      {
+        num: "03",
+        title: "Kepribadian Unggul, Wawasan Kebangsaan, dan Bela Negara",
+        icon: "fa-flag",
+        focus: "Pemupukan jiwa nasionalisme, kedisiplinan upacara, kepramukaan, serta kesadaran bela negara.",
+        examples: [
+          "Melaksanakan upacara bendera pada hari Senin serta hari besar nasional",
+          "Melaksanakan kegiatan Kepramukaan",
+          "Visits ke tempat bersejarah (Wisata Sejarah)",
+          "Melaksanakan pertukaran siswa antar daerah/internasional",
+          "Mempelajari dan menyanyikan lagu-lagu nasional dan daerah"
+        ]
+      },
+      {
+        num: "04",
+        title: "Prestasi Akademik, Seni, dan/atau Olahraga sesuai Bakat dan Minat",
+        icon: "fa-trophy",
+        focus: "Penjaringan dan pengembangan potensi intelektual, bakat seni, serta ketangkasan olahraga.",
+        examples: [
+          "Melaksanakan Lomba Karya Tulis Ilmiah (LKTI)",
+          "Menyelenggarakan kegiatan ilmiah, diskusi, dan debat siswa",
+          "Menyelenggarakan festival seni dan budaya siswa",
+          "Menyelenggarakan pertandingan olahraga antar kelas (Classmeeting)",
+          "Pengembangan klub sains, seni, dan olahraga sekolah"
+        ]
+      },
+      {
+        num: "05",
+        title: "Demokrasi, HAM, Pendidikan Politik, Lingkungan Hidup, Kepekaan dan Toleransi Sosial",
+        icon: "fa-scale-balanced",
+        focus: "Pendidikan pemilu OSIS yang demokratis, kesadaran hak asasi, kepekaan sosial, dan pelestarian lingkungan.",
+        examples: [
+          "Melaksanakan Pemilihan Umum Ketua OSIS (Pemilwa) secara demokratis",
+          "Melaksanakan kegiatan BAKSOS (Bakti Sosial) dan penggalangan dana musibah",
+          "Melaksanakan kegiatan penghijauan dan reboisasi lingkungan sekolah",
+          "Melaksanakan razia ketertiban dan Operasi Semut (kebersihan spontan)",
+          "Melaksanakan forum diskusi/forum OSIS MPK"
+        ]
+      },
+      {
+        num: "06",
+        title: "Kreativitas, Keterampilan, dan Kewirausahaan",
+        icon: "fa-lightbulb",
+        focus: "Meningkatkan kemandirian finansial siswa, keterampilan vokasional, dan jiwa kewirausahaan.",
+        examples: [
+          "Meningkatkan kreativitas dan keterampilan dalam menciptakan suatu produk bermanfaat",
+          "Meningkatkan usaha koperasi siswa dan kantin kejujuran",
+          "Melaksanakan praktek bazaar atau kewirausahaan siswa (Market Day)",
+          "Melaksanakan pelatihan kerajinan daur ulang sampah",
+          "Pelatihan pembuatan produk kreatif berdaya jual"
+        ]
+      },
+      {
+        num: "07",
+        title: "Kualitas Jasmani, Kesehatan, dan Gizi berbasis Sumber Gizi Terdiversifikasi",
+        icon: "fa-person-running",
+        focus: "Peningkatan kebugaran fisik, pola hidup sehat, kebersihan gizi, dan pencegahan bahaya zat adiktif.",
+        examples: [
+          "Melaksanakan Senam Kesegaran Jasmani (SKJ) atau senam bersama rutin",
+          "Melaksanakan kegiatan Olahraga Tradisional",
+          "Penyuluhan kesehatan, bahaya Narkotika, Psikotropika, dan Zat Adiktif (NAPZA)",
+          "Penyuluhan gizi seimbang dan pencegahan penyakit menular",
+          "Pemeriksaan kesehatan berkala kerja sama dengan Puskesmas"
+        ]
+      },
+      {
+        num: "08",
+        title: "Sastra dan Budaya",
+        icon: "fa-masks-theater",
+        focus: "Apresiasi karya sastra, pelestarian seni tradisional, serta ekspresi kebudayaan daerah dan nasional.",
+        examples: [
+          "Mengembangkan bacaan sastra di perpustakaan sekolah",
+          "Melaksanakan lomba cipta dan baca puisi, cerpen, serta pidato",
+          "Menyelenggarakan pementasan drama / teater sekolah",
+          "Pementasan musik dan tarian tradisional",
+          "Penerbitan majalah dinding (Mading) dan buletin sekolah"
+        ]
+      },
+      {
+        num: "09",
+        title: "Teknologi Informasi dan Komunikasi (TIK)",
+        icon: "fa-laptop-code",
+        focus: "Pemanfaatan media digital, pengelolaan website/sosmed sekolah, serta literasi digital yang sehat.",
+        examples: [
+          "Pengelolaan website, jurnalistik, dan media sosial resmi OSIS",
+          "Melaksanakan pelatihan desain grafis, fotografi, dan videografi",
+          "Menyelenggarakan lomba pembuatan konten edukatif digital",
+          "Pemanfaatan TIK secara bijak untuk penunjang belajar dan organisasi",
+          "Penyuluhan etika berinternet (Cyber Ethics)"
+        ]
+      },
+      {
+        num: "10",
+        title: "Komunikasi dalam Bahasa Inggris",
+        icon: "fa-language",
+        focus: "Peningkatan kecakapan berbahasa asing sebagai modal daya saing global peserta didik.",
+        examples: [
+          "Melaksanakan kegiatan English Day di lingkungan sekolah",
+          "Menyelenggarakan English Speech Contest & Story Telling",
+          "Membentuk dan mengaktifkan English Club",
+          "Menyelenggarakan Wall Magazine / Mading Bahasa Inggris",
+          "Latihan debat Bahasa Inggris (English Debate)"
+        ]
+      }
+    ];
+
+    // QUIZ DATA - 10 SOAL MEWAKILI 10 BIDANG OSIS
+    const quizData = [
+      {
+        id: 1,
+        bidangNum: "01",
+        question: "Pengurus OSIS mengadakan peringatan Isra Miraj / Maulid Nabi serta penggalangan dana infak rutin setiap hari Jumat. Kegiatan ini termasuk dalam bidang...",
+        options: [
+          "Keimanan dan Ketaqwaan terhadap Tuhan Yang Maha Esa",
+          "Budi Pekerti Luhur atau Akhlak Mulia",
+          "Sastra dan Budaya",
+          "Demokrasi dan Hak Asasi Manusia"
+        ],
+        correct: 0,
+        explanation: "Peringatan hari besar keagamaan dan amaliah infak rutin merupakan program utama Bidang 01 (Keimanan dan Ketaqwaan terhadap Tuhan YME)."
+      },
+      {
+        id: 2,
+        bidangNum: "02",
+        question: "OSIS mengadakan Operasi Semut (bersih sampah spontan) dan penegakan kultur 7K (Kebersihan, Ketertiban, Kedamaian) di sekolah. Kegiatan ini masuk ke dalam bidang...",
+        options: [
+          "Kualitas Jasmani dan Kesehatan",
+          "Budi Pekerti Luhur atau Akhlak Mulia",
+          "Kreativitas dan Kewirausahaan",
+          "Prestasi Akademik dan Olahraga"
+        ],
+        correct: 1,
+        explanation: "Gotong royong kebersihan, kultur sekolah, dan pelaksanaan 7K adalah fokus utama Bidang 02 (Budi Pekerti Luhur atau Akhlak Mulia)."
+      },
+      {
+        id: 3,
+        bidangNum: "03",
+        question: "Petugas Upacara Bendera setiap hari Senin dan latihan rutin Pramuka dilatih secara disiplin oleh OSIS. Hal ini adalah wujud program bidang...",
+        options: [
+          "Komunikasi dalam Bahasa Inggris",
+          "Sastra dan Budaya",
+          "Kepribadian Unggul, Wawasan Kebangsaan, dan Bela Negara",
+          "Teknologi Informasi dan Komunikasi"
+        ],
+        correct: 2,
+        explanation: "Upacara bendera, wawasan kebangsaan, dan Kepramukaan diwadahi oleh Bidang 03 (Kepribadian Unggul & Bela Negara)."
+      },
+      {
+        id: 4,
+        bidangNum: "04",
+        question: "Menyelenggarakan Lomba Karya Tulis Ilmiah (LKTI) serta pertandingan olahraga Classmeeting antar kelas merupakan tugas bidang...",
+        options: [
+          "Prestasi Akademik, Seni, dan/atau Olahraga sesuai Bakat dan Minat",
+          "Kualitas Jasmani dan Kesehatan",
+          "Kreativitas dan Kewirausahaan",
+          "Demokrasi dan HAM"
+        ],
+        correct: 0,
+        explanation: "Kompetisi akademik (LKTI) dan olahraga antar kelas diwadahi langsung oleh Bidang 04."
+      },
+      {
+        id: 5,
+        bidangNum: "05",
+        question: "Pelaksanaan Pemilihan Umum Ketua OSIS (Pemilwa) secara serentak dan jurdil merupakan penerapan dari bidang...",
+        options: [
+          "Komunikasi Bahasa Inggris",
+          "Demokrasi, Hak Asasi Manusia, Pendidikan Politik, dan Lingkungan Hidup",
+          "Sastra dan Budaya",
+          "Budi Pekerti Luhur"
+        ],
+        correct: 1,
+        explanation: "Pemilwa demokratis dan pendidikan politik siswa berada di bawah naungan Bidang 05."
+      },
+      {
+        id: 6,
+        bidangNum: "06",
+        question: "OSIS membuka stand Market Day saat Classmeeting dan mengelola Koperasi Siswa untuk melatih jiwa bisnis siswa. Ini adalah tugas bidang...",
+        options: [
+          "Kreativitas, Keterampilan, dan Kewirausahaan",
+          "Teknologi Informasi dan Komunikasi",
+          "Prestasi Akademik",
+          "Keimanan dan Ketaqwaan"
+        ],
+        correct: 0,
+        explanation: "Market Day dan pengembangan usaha siswa merupakan wujud nyata program Bidang 06 (Kreativitas & Kewirausahaan)."
+      },
+      {
+        id: 7,
+        bidangNum: "07",
+        question: "Kegiatan Senam Bugar bersama seluruh siswa serta Penyuluhan Bahaya Narkoba (NAPZA) diampu oleh bidang...",
+        options: [
+          "Kepribadian Unggul dan Bela Negara",
+          "Kualitas Jasmani, Kesehatan, dan Gizi berbasis Sumber Gizi Terdiversifikasi",
+          "Budi Pekerti Luhur",
+          "Demokrasi dan Lingkungan Hidup"
+        ],
+        correct: 1,
+        explanation: "Kebugaran fisik, senam bersama, dan pencegahan zat adiktif dikelola oleh Bidang 07."
+      },
+      {
+        id: 8,
+        bidangNum: "08",
+        question: "Pengurus OSIS menerbitkan Majalah Dinding (Mading) serta mengadakan pementasan Teater dan Tari Tradisional. Kegiatan ini ranah dari bidang...",
+        options: [
+          "Teknologi Informasi dan Komunikasi",
+          "Sastra dan Budaya",
+          "Komunikasi Bahasa Inggris",
+          "Prestasi Akademik"
+        ],
+        correct: 1,
+        explanation: "Karya mading, apresiasi drama/teater, dan tari tradisional diwadahi oleh Bidang 08 (Sastra dan Budaya)."
+      },
+      {
+        id: 9,
+        bidangNum: "09",
+        question: "Mengelola akun Instagram resmi OSIS, membuat dokumentasi video, dan mengadakan pelatihan Desain Grafis adalah tugas bidang...",
+        options: [
+          "Teknologi Informasi dan Komunikasi (TIK)",
+          "Kreativitas dan Kewirausahaan",
+          "Komunikasi Bahasa Inggris",
+          "Demokrasi dan Pendidikan Politik"
+        ],
+        correct: 0,
+        explanation: "Pengelolaan media sosial resmi, desain, dan literasi digital adalah tugas utama Bidang 09 (TIK)."
+      },
+      {
+        id: 10,
+        bidangNum: "10",
+        question: "Mengadakan penerapan program 'English Day' seminggu sekali dan lomba English Speech Contest dikelola oleh bidang...",
+        options: [
+          "Sastra dan Budaya",
+          "Prestasi Akademik",
+          "Komunikasi dalam Bahasa Inggris",
+          "Kepribadian Unggul"
+        ],
+        correct: 2,
+        explanation: "Peningkatan keterampilan berbahasa asing diwadahi secara spesifik oleh Bidang 10 (Komunikasi Bahasa Inggris)."
+      }
+    ];
+
+    // GAME 1 DATA
+    const game1Scenarios = [
+      {
+        title: "Konflik Jadwal Kegiatan",
+        desc: "Seksi Bidang 04 hendak mengadakan Classmeeting, namun di hari yang sama Seksi Bidang 01 ingin mengadakan Peringatan Hari Besar Keagamaan. Sebagai Ketua OSIS, tindakan kepemimpinan terbaik adalah...",
+        options: [
+          { text: "Membatalkan salah satu kegiatan secara sepihak tanpa diskusi.", score: 0, feedback: "Kurang tepat. Keputusan sepihak memicu konflik internal." },
+          { text: "Mengadakan musyawarah bersama Pembina & kedua bidang untuk menyusun timeline penyesuaian tanpa mematikan salah satu acara.", score: 10, feedback: "Sangat Bijak! Pemimpin yang baik mengutamakan komunikasi & solusi win-win." },
+          { text: "Membiarkan kedua bidang berebut lapangan sekolah.", score: 0, feedback: "Salah. Pemimpin tidak boleh bersikap pembiaran (laissez-faire) pada konflik." }
+        ]
+      },
+      {
+        title: "Anggota Tim Pasif",
+        desc: "Saat mempersiapkan proposal kegiatan, ada 2 anggota tim yang tidak pernah hadir rapat dan pasif. Sikap Anda adalah...",
+        options: [
+          { text: "Langsung mengeluarkan mereka dari struktur pengurus OSIS.", score: 0, feedback: "Terlalu gegabah tanpa tabayyun/klarifikasi." },
+          { text: "Mengajak bicara secara personal (persuasif), menanyakan kendala, dan memberikan tanggung jawab yang jelas.", score: 10, feedback: "Tepat Sekali! Pendekatan emosional dan pembinaan personal adalah ciri pemimpin pengayom." },
+          { text: "Mengerjakan seluruh tugas mereka sendirian tanpa memberi tahu.", score: 2, feedback: "Kurang baik. Ini menyebabkan burnout pada diri Anda." }
+        ]
+      }
+    ];
+
+    // STATE VARIABLES
+    let currentQuizIndex = 0;
+    let quizScore = 0;
+    let quizAnswered = false;
+
+    // RENDER 10 BIDANG GRID ON LOAD
+    window.onload = function() {
+      renderBidangGrid();
+      loadQuizQuestion();
+    };
+
+    function renderBidangGrid() {
+      const container = document.getElementById('bidangGrid');
+      if (!container) return;
+      container.innerHTML = '';
+
+      bidangData.forEach((item, idx) => {
+        const card = document.createElement('div');
+        card.className = "bg-slate-50 dark:bg-slate-800/80 p-5 rounded-2xl border border-slate-200 dark:border-slate-700 hover:border-blue-500 hover:shadow-lg transition cursor-pointer flex flex-col justify-between group";
+        card.onclick = () => openBidangModal(idx);
+
+        card.innerHTML = `
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="w-8 h-8 rounded-lg bg-blue-600 text-white font-extrabold flex items-center justify-center text-xs shadow">
+                ${item.num}
+              </span>
+              <i class="fa-solid ${item.icon} text-lg text-slate-400 group-hover:text-blue-500 transition"></i>
+            </div>
+            <h4 class="font-bold text-slate-900 dark:text-white text-xs sm:text-sm leading-snug line-clamp-3 mb-2">
+              ${item.title}
+            </h4>
+          </div>
+          <div class="pt-3 border-t border-slate-200/60 dark:border-slate-700/60 text-[11px] text-blue-600 dark:text-blue-400 font-semibold flex items-center justify-between">
+            <span>Lihat Detail</span>
+            <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition"></i>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function openBidangModal(index) {
+      const data = bidangData[index];
+      document.getElementById('modalBidangNum').innerText = data.num;
+      document.getElementById('modalBidangTitle').innerText = data.title;
+      document.getElementById('modalBidangFocus').innerText = data.focus;
+
+      const exList = document.getElementById('modalBidangExamples');
+      exList.innerHTML = '';
+      data.examples.forEach(ex => {
+        const li = document.createElement('li');
+        li.innerText = ex;
+        exList.appendChild(li);
+      });
+
+      document.getElementById('bidangModal').classList.remove('hidden');
+    }
+
+    function closeBidangModal() {
+      document.getElementById('bidangModal').classList.add('hidden');
+    }
+
+    // ALUR KERJA TAB SWITCHER
+    function switchAlurCategory(type) {
+      const btnEkstra = document.getElementById('btnEkstra');
+      const btnNonEkstra = document.getElementById('btnNonEkstra');
+      const step1Desc = document.getElementById('step1Desc');
+
+      if (type === 'ekstra') {
+        btnEkstra.className = "px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-blue-600 text-white shadow-sm transition";
+        btnNonEkstra.className = "px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold text-slate-600 dark:text-slate-300 hover:text-slate-900 transition";
+        step1Desc.innerText = "Perencanaan program rutin dari Pembina Ekstrakurikuler / Pengurus Seksi Bidang OSIS.";
+      } else {
+        btnNonEkstra.className = "px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-blue-600 text-white shadow-sm transition";
+        btnEkstra.className = "px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold text-slate-600 dark:text-slate-300 hover:text-slate-900 transition";
+        step1Desc.innerText = "Perencanaan insidental / proyek khusus non-ekstrakurikuler (contoh: PHBN, LDKS, Pensi).";
+      }
+    }
+
+    // ICE BREAKING TAB SWITCHER
+    function switchIceTab(tab) {
+      const tabGameBtn = document.getElementById('tabGameBtn');
+      const tabQuizBtn = document.getElementById('tabQuizBtn');
+      const gameContainer = document.getElementById('gameContainer');
+      const quizContainer = document.getElementById('quizContainer');
+
+      if (tab === 'game') {
+        tabGameBtn.className = "px-6 py-3 rounded-xl text-xs sm:text-sm font-bold bg-emerald-600 text-white shadow-md transition";
+        tabQuizBtn.className = "px-6 py-3 rounded-xl text-xs sm:text-sm font-bold text-slate-600 dark:text-slate-300 hover:text-slate-900 transition";
+        gameContainer.classList.remove('hidden');
+        quizContainer.classList.add('hidden');
+      } else {
+        tabQuizBtn.className = "px-6 py-3 rounded-xl text-xs sm:text-sm font-bold bg-emerald-600 text-white shadow-md transition";
+        tabGameBtn.className = "px-6 py-3 rounded-xl text-xs sm:text-sm font-bold text-slate-600 dark:text-slate-300 hover:text-slate-900 transition";
+        quizContainer.classList.remove('hidden');
+        gameContainer.classList.add('hidden');
+      }
+    }
+
+    // GAME 1 LOGIC
+    let game1Index = 0;
+    let game1Score = 0;
+
+    function startGame1() {
+      game1Index = 0;
+      game1Score = 0;
+      document.getElementById('gamePlayArea').classList.remove('hidden');
+      renderGame1Scenario();
+    }
+
+    function renderGame1Scenario() {
+      const area = document.getElementById('gamePlayContent');
+      if (game1Index >= game1Scenarios.length) {
+        area.innerHTML = `
+          <div class="text-center space-y-4 py-4">
+            <i class="fa-solid fa-award text-4xl text-gold-400"></i>
+            <h3 class="text-xl font-bold">Simulasi Kepemimpinan Selesai!</h3>
+            <p class="text-sm text-slate-300">Skor Kepemimpinan Anda: <span class="font-bold text-emerald-400">${game1Score} / ${game1Scenarios.length * 10}</span></p>
+            <p class="text-xs text-slate-400">Kepemimpinan adalah seni mendengarkan, merangkul, dan mengambil keputusan secara bijaksana.</p>
+            <button onclick="startGame1()" class="px-5 py-2.5 rounded-xl bg-blue-600 text-white font-bold text-xs">Coba Lagi</button>
+          </div>
+        `;
+        return;
+      }
+
+      const sc = game1Scenarios[game1Index];
+      let optsHTML = '';
+      sc.options.forEach((opt, idx) => {
+        optsHTML += `
+          <button onclick="handleGame1Answer(${opt.score}, '${opt.feedback.replace(/'/g, "\\'")}')" class="w-full text-left p-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs sm:text-sm text-slate-200 transition">
+            ${idx + 1}. ${opt.text}
+          </button>
+        `;
+      });
+
+      area.innerHTML = `
+        <div class="space-y-4">
+          <div class="text-xs font-bold text-blue-400 uppercase">Studi Kasus ${game1Index + 1} dari ${game1Scenarios.length}</div>
+          <h4 class="text-base font-bold text-white">${sc.title}</h4>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">${sc.desc}</p>
+          <div class="space-y-2 pt-2">${optsHTML}</div>
+        </div>
+      `;
+    }
+
+    function handleGame1Answer(score, feedback) {
+      game1Score += score;
+      const area = document.getElementById('gamePlayContent');
+      area.innerHTML = `
+        <div class="space-y-4 text-center py-2">
+          <div class="text-lg font-bold ${score > 0 ? 'text-emerald-400' : 'text-rose-400'}">
+            ${score > 0 ? '<i class="fa-solid fa-circle-check"></i> Keputusan Tepat!' : '<i class="fa-solid fa-circle-xmark"></i> Kurang Tepat'}
+          </div>
+          <p class="text-xs sm:text-sm text-slate-200 bg-slate-800 p-4 rounded-xl border border-slate-700">${feedback}</p>
+          <button onclick="nextGame1Step()" class="px-5 py-2.5 rounded-xl bg-blue-600 text-white font-bold text-xs">Lanjutkan <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      `;
+    }
+
+    function nextGame1Step() {
+      game1Index++;
+      renderGame1Scenario();
+    }
+
+    // GAME 2 LOGIC
+    function startGame2() {
+      document.getElementById('gamePlayArea').classList.remove('hidden');
+      const area = document.getElementById('gamePlayContent');
+      area.innerHTML = `
+        <div class="space-y-4">
+          <div class="text-xs font-bold text-purple-400 uppercase">Game 2 • Misi Strategi Tim</div>
+          <h4 class="text-base font-bold text-white">Tantangan: Pengeluaran Dana & Waktu Acara</h4>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            H-1 Acara LDKS, sound system utama sekolah rusak. Anggaran tersisa terbatas. Sebagai Sie Perlengkapan & Ketua OSIS, apa keputusan tercepat dan terhemat?
+          </p>
+          <div class="space-y-2 pt-2">
+            <button onclick="handleGame2Choice(1)" class="w-full text-left p-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs sm:text-sm text-slate-200">
+              A. Meminjam sound system milik masjid/warga sekitar dengan surat resmi OSIS.
+            </button>
+            <button onclick="handleGame2Choice(2)" class="w-full text-left p-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs sm:text-sm text-slate-200">
+              B. Memaksa sewa sound system mahal melebihi sisa kas.
+            </button>
+            <button onclick="handleGame2Choice(3)" class="w-full text-left p-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs sm:text-sm text-slate-200">
+              C. Membatalkan acara LDKS secara keseluruhan.
+            </button>
+          </div>
+        </div>
+      `;
+    }
+
+    function handleGame2Choice(choice) {
+      const area = document.getElementById('gamePlayContent');
+      if (choice === 1) {
+        area.innerHTML = `
+          <div class="space-y-4 text-center py-2">
+            <div class="text-lg font-bold text-emerald-400"><i class="fa-solid fa-circle-check"></i> Solusi Efektif & Solutif!</div>
+            <p class="text-xs sm:text-sm text-slate-200 bg-slate-800 p-4 rounded-xl border border-slate-700">
+              Pemanfaatan jaringan hubungan kemasyarakatan (Humas) dengan surat resmi merupakan ciri pemimpin hemat, cepat tanggap, dan komunikatif.
+            </p>
+            <button onclick="closeGamePlay()" class="px-5 py-2.5 rounded-xl bg-purple-600 text-white font-bold text-xs">Selesai Game</button>
+          </div>
+        `;
+      } else {
+        area.innerHTML = `
+          <div class="space-y-4 text-center py-2">
+            <div class="text-lg font-bold text-rose-400"><i class="fa-solid fa-circle-xmark"></i> Kurang Tepat</div>
+            <p class="text-xs sm:text-sm text-slate-200 bg-slate-800 p-4 rounded-xl border border-slate-700">
+              Opsi ini berisiko membengkakkan defisit kas organisasi atau merugikan jalannya kegiatan.
+            </p>
+            <button onclick="startGame2()" class="px-5 py-2.5 rounded-xl bg-purple-600 text-white font-bold text-xs">Coba Lagi</button>
+          </div>
+        `;
+      }
+    }
+
+    function closeGamePlay() {
+      document.getElementById('gamePlayArea').classList.add('hidden');
+    }
+
+    // KUIS LOGIC
+    function loadQuizQuestion() {
+      quizAnswered = false;
+      const q = quizData[currentQuizIndex];
+
+      document.getElementById('quizProgressText').innerText = `Soal ${currentQuizIndex + 1} dari ${quizData.length}`;
+      document.getElementById('quizScoreLive').innerText = `Skor Saat Ini: ${quizScore}`;
+      document.getElementById('quizProgressBar').style.width = `${((currentQuizIndex + 1) / quizData.length) * 100}%`;
+
+      document.getElementById('quizCategoryBadge').innerText = `Studi Kasus Seksi / Bidang OSIS #${q.bidangNum}`;
+      document.getElementById('quizQuestionText').innerText = q.question;
+
+      const optsContainer = document.getElementById('quizOptionsContainer');
+      optsContainer.innerHTML = '';
+
+      q.options.forEach((optText, idx) => {
+        const btn = document.createElement('button');
+        btn.className = "quiz-opt-btn w-full text-left p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-xs sm:text-sm font-semibold text-slate-800 dark:text-slate-200 hover:border-emerald-500 hover:bg-emerald-50/50 dark:hover:bg-slate-800 transition flex items-center justify-between";
+        btn.onclick = () => selectQuizOption(idx);
+        btn.innerHTML = `
+          <span>${String.fromCharCode(65 + idx)}. ${optText}</span>
+          <i class="fa-regular fa-circle text-slate-300"></i>
+        `;
+        optsContainer.appendChild(btn);
+      });
+
+      document.getElementById('quizFeedbackBox').className = "hidden p-4 rounded-2xl border text-xs sm:text-sm leading-relaxed";
+      document.getElementById('quizNextBtn').classList.add('hidden');
+    }
+
+    function selectQuizOption(selectedIdx) {
+      if (quizAnswered) return;
+      quizAnswered = true;
+
+      const q = quizData[currentQuizIndex];
+      const isCorrect = selectedIdx === q.correct;
+
+      if (isCorrect) {
+        quizScore += 10;
+      }
+
+      document.getElementById('quizScoreLive').innerText = `Skor Saat Ini: ${quizScore}`;
+
+      const btns = document.querySelectorAll('.quiz-opt-btn');
+      btns.forEach((btn, idx) => {
+        btn.disabled = true;
+        if (idx === q.correct) {
+          btn.className = "w-full text-left p-4 rounded-xl bg-emerald-100 dark:bg-emerald-950/80 border-2 border-emerald-500 text-xs sm:text-sm font-bold text-emerald-900 dark:text-emerald-200 flex items-center justify-between";
+          btn.querySelector('i').className = "fa-solid fa-circle-check text-emerald-600 text-base";
+        } else if (idx === selectedIdx && !isCorrect) {
+          btn.className = "w-full text-left p-4 rounded-xl bg-rose-100 dark:bg-rose-950/80 border-2 border-rose-500 text-xs sm:text-sm font-bold text-rose-900 dark:text-rose-200 flex items-center justify-between";
+          btn.querySelector('i').className = "fa-solid fa-circle-xmark text-rose-600 text-base";
+        }
+      });
+
+      const fb = document.getElementById('quizFeedbackBox');
+      fb.classList.remove('hidden');
+      if (isCorrect) {
+        fb.className = "p-4 rounded-2xl border text-xs sm:text-sm leading-relaxed bg-emerald-50 dark:bg-emerald-950/50 border-emerald-300 dark:border-emerald-800 text-emerald-900 dark:text-emerald-200";
+        fb.innerHTML = `<strong><i class="fa-solid fa-circle-check mr-1"></i> Jawaban Benar!</strong><br>${q.explanation}`;
+      } else {
+        fb.className = "p-4 rounded-2xl border text-xs sm:text-sm leading-relaxed bg-rose-50 dark:bg-rose-950/50 border-rose-300 dark:border-rose-800 text-rose-900 dark:text-rose-200";
+        fb.innerHTML = `<strong><i class="fa-solid fa-circle-xmark mr-1"></i> Jawaban Kurang Tepat.</strong><br>Jawaban yang benar adalah: <strong>${q.options[q.correct]}</strong>.<br>${q.explanation}`;
+      }
+
+      document.getElementById('quizNextBtn').classList.remove('hidden');
+    }
+
+    function nextQuizQuestion() {
+      currentQuizIndex++;
+      if (currentQuizIndex < quizData.length) {
+        loadQuizQuestion();
+      } else {
+        showQuizResults();
+      }
+    }
+
+    function showQuizResults() {
+      document.getElementById('quizQuestionCard').classList.add('hidden');
+      const resBox = document.getElementById('quizResultBox');
+      resBox.classList.remove('hidden');
+
+      const scoreVal = document.getElementById('finalScoreVal');
+      const scoreBadge = document.getElementById('finalScoreBadge');
+      const scoreDesc = document.getElementById('finalScoreDesc');
+
+      scoreVal.innerText = quizScore;
+
+      if (quizScore >= 80) {
+        scoreBadge.innerText = "Sangat Baik";
+        scoreBadge.className = "inline-block px-4 py-1.5 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-900/60 dark:text-emerald-300";
+        scoreDesc.innerText = "Sangat Luar Biasa! Anda telah menguasai seluruh tugas dan fungsi 10 Bidang OSIS dengan sempurna.";
+      } else if (quizScore >= 50) {
+        scoreBadge.innerText = "Cukup Baik";
+        scoreBadge.className = "inline-block px-4 py-1.5 rounded-full text-xs font-bold bg-amber-100 text-amber-800 dark:bg-amber-900/60 dark:text-amber-300";
+        scoreDesc.innerText = "Hasil yang baik! Anda sudah memahami sebagian besar struktur bidang OSIS, namun perlu membaca ulang beberapa materi bidang.";
+      } else {
+        scoreBadge.innerText = "Perlu Pendalaman";
+        scoreBadge.className = "inline-block px-4 py-1.5 rounded-full text-xs font-bold bg-rose-100 text-rose-800 dark:bg-rose-900/60 dark:text-rose-300";
+        scoreDesc.innerText = "Jangan berkecil hati! Silakan pelajari kembali rincian 10 Bidang Pembinaan OSIS di atas dan ulangi kuis ini.";
+      }
+    }
+
+    function restartQuiz() {
+      currentQuizIndex = 0;
+      quizScore = 0;
+      document.getElementById('quizResultBox').classList.add('hidden');
+      document.getElementById('quizQuestionCard').classList.remove('hidden');
+      loadQuizQuestion();
+    }
+
+    // DARK MODE TOGGLE LOGIC
+    const themeToggleBtn = document.getElementById('themeToggle');
+    themeToggleBtn.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+    });
+
+    // MOBILE MENU TOGGLE LOGIC
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  </script>
+</body>
+</html>
