@@ -1541,18 +1541,46 @@
     let quizAnswered = false;
     let activeQuizData = [];
 
-    // Mengacak urutan 10 soal agar bidang OSIS tidak muncul berurutan
-    function shuffleQuizData() {
-      activeQuizData = [...quizData];
-      for (let i = activeQuizData.length - 1; i > 0; i--) {
+    // Fisher-Yates shuffle helper
+    function shuffleArray(array) {
+      const copy = [...array];
+      for (let i = copy.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
-        [activeQuizData[i], activeQuizData[j]] = [activeQuizData[j], activeQuizData[i]];
+        [copy[i], copy[j]] = [copy[j], copy[i]];
       }
+      return copy;
+    }
+
+    // Mengacak urutan soal DAN opsi jawaban.
+    // Kunci disimpan sebagai teks jawaban, lalu indeks `correct` dihitung ulang
+    // setelah opsi diacak agar kunci, pertanyaan, dan pembahasan selalu sinkron.
+    function shuffleQuizData() {
+      activeQuizData = shuffleArray(quizData).map(original => {
+        const correctAnswer = original.options[original.correct];
+        const shuffledOptions = shuffleArray(original.options);
+        return {
+          ...original,
+          options: shuffledOptions,
+          correct: shuffledOptions.indexOf(correctAnswer)
+        };
+      });
+    }
+
+    // Validasi internal: setiap soal harus memiliki kunci yang benar-benar ada di opsinya.
+    function validateQuizData() {
+      return quizData.every(q => {
+        const correctAnswer = q.options[q.correct];
+        return Boolean(q.question && q.options.length >= 2 && correctAnswer);
+      });
     }
 
     // RENDER 10 BIDANG GRID ON LOAD
     window.onload = function() {
       renderBidangGrid();
+      if (!validateQuizData()) {
+        console.error('Data kuis tidak valid. Periksa pertanyaan, opsi, dan kunci jawaban.');
+        return;
+      }
       shuffleQuizData();
       loadQuizQuestion();
     };
@@ -1794,7 +1822,7 @@
       document.getElementById('quizScoreLive').innerText = `Skor Saat Ini: ${quizScore}`;
       document.getElementById('quizProgressBar').style.width = `${((currentQuizIndex + 1) / quizData.length) * 100}%`;
 
-      document.getElementById('quizCategoryBadge').innerText = `Studi Kasus Seksi / Bidang OSIS #${q.bidangNum}`;
+      document.getElementById('quizCategoryBadge').innerText = `Studi Kasus Seksi / Bidang OSIS`;
       document.getElementById('quizQuestionText').innerText = q.question;
 
       const optsContainer = document.getElementById('quizOptionsContainer');
@@ -1819,7 +1847,7 @@
       if (quizAnswered) return;
       quizAnswered = true;
 
-      const q = quizData[currentQuizIndex];
+      const q = activeQuizData[currentQuizIndex];
       const isCorrect = selectedIdx === q.correct;
 
       if (isCorrect) {
