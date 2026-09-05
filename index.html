@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LDKS OSIS & MPK 2026/2027 - SMAN 1 Pagerbarang</title>
+  <title>LDKS OSIS & MPK 2026/2027 - SMA Negeri 1 Pagerbarang</title>
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -81,7 +81,7 @@
           </div>
           <div class="flex flex-col">
             <span class="font-extrabold text-base tracking-tight text-blue-900 dark:text-blue-400 leading-none">LDKS 2026</span>
-            <span class="text-xs text-slate-500 dark:text-slate-400 font-semibold">SMAN 1 Pagerbarang</span>
+            <span class="text-xs text-slate-500 dark:text-slate-400 font-semibold">SMA Negeri 1 Pagerbarang</span>
           </div>
         </a>
 
@@ -110,7 +110,7 @@
 
           <!-- CTA Mobile/Desktop -->
           <a href="#ice-breaking" class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold shadow-md hover:shadow-lg hover:opacity-95 transition">
-            <i class="fa-solid fa-play text-xs"></i> Mulai Kuis
+            <i class="fa-solid fa-gamepad text-xs"></i> Mulai Aktivitas
           </a>
 
           <!-- Mobile Hamburger Toggle -->
@@ -260,7 +260,7 @@
                 <span class="w-8 h-8 rounded-lg bg-emerald-600 text-white font-bold flex items-center justify-center text-xs group-hover:scale-110 transition">07</span>
                 <div class="flex-1">
                   <div class="text-xs font-bold text-emerald-900 dark:text-emerald-300">Ice Breaking & Kuis</div>
-                  <div class="text-[11px] text-emerald-600 dark:text-emerald-400">Game Kepemimpinan & Kuis 10 Bidang</div>
+                  <div class="text-[11px] text-emerald-600 dark:text-emerald-400">Ice Breaking, Game Kepemimpinan & Kuis</div>
                 </div>
                 <span class="text-xs text-emerald-600 font-bold">Uji Pemahaman <i class="fa-solid fa-gamepad text-xs"></i></span>
               </a>
@@ -941,17 +941,20 @@
           ICE BREAKING & UJI PEMAHAMAN LDKS
         </h2>
         <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400">
-          Uji pemahaman dan latih naluri kepemimpinan organisasi melalui Game Simulasi dan Kuis Interaktif 10 Bidang OSIS.
+          Bangun suasana positif melalui Ice Breaking bernuansa kepemimpinan, lalu uji pemahaman melalui Game Simulasi dan Kuis Interaktif 10 Bidang OSIS.
         </p>
       </div>
 
       <!-- TAB SELECTION BUTTONS -->
       <div class="flex justify-center mb-10">
         <div class="bg-slate-100 dark:bg-slate-800 p-1.5 rounded-2xl border border-slate-200 dark:border-slate-700 inline-flex gap-2">
-          <button id="tabGameBtn" onclick="switchIceTab('game')" class="px-6 py-3 rounded-xl text-xs sm:text-sm font-bold bg-emerald-600 text-white shadow-md transition">
+          <button id="tabGameBtn" onclick="switchIceTab('game')" class="px-5 sm:px-6 py-3 rounded-xl text-xs sm:text-sm font-bold bg-emerald-600 text-white shadow-md transition">
             <i class="fa-solid fa-chess-knight mr-2"></i> Game Kepemimpinan
           </button>
-          <button id="tabQuizBtn" onclick="switchIceTab('quiz')" class="px-6 py-3 rounded-xl text-xs sm:text-sm font-bold text-slate-600 dark:text-slate-300 hover:text-slate-900 transition">
+          <button id="tabIceBtn" onclick="switchIceTab('ice')" class="px-5 sm:px-6 py-3 rounded-xl text-xs sm:text-sm font-bold text-slate-600 dark:text-slate-300 hover:text-slate-900 transition">
+            <i class="fa-solid fa-face-laugh-beam mr-2"></i> Ice Breaking
+          </button>
+          <button id="tabQuizBtn" onclick="switchIceTab('quiz')" class="px-5 sm:px-6 py-3 rounded-xl text-xs sm:text-sm font-bold text-slate-600 dark:text-slate-300 hover:text-slate-900 transition">
             <i class="fa-solid fa-clipboard-question mr-2"></i> Kuis Tebak Bidang OSIS
           </button>
         </div>
@@ -1019,6 +1022,47 @@
           </div>
         </div>
 
+      </div>
+
+      <!-- CONTAINER ICE BREAKING -->
+      <div id="iceContainer" class="hidden space-y-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div class="bg-gradient-to-br from-amber-50 to-white dark:from-slate-800 dark:to-slate-900 p-6 rounded-3xl border border-amber-200 dark:border-slate-700 shadow-md flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4"><span class="px-3 py-1 rounded-full bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300 text-xs font-bold">Ice Breaking 1</span><i class="fa-solid fa-people-arrows text-2xl text-amber-500"></i></div>
+              <h3 class="text-xl font-extrabold text-slate-900 dark:text-white mb-2">Pemimpin Berantai</h3>
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">Peserta membuat lingkaran. Satu orang memimpin gerakan sederhana, lalu kepemimpinan berpindah ke peserta berikutnya. Tujuannya mencairkan suasana dan melatih keberanian mengambil inisiatif.</p>
+              <div class="p-3 rounded-xl bg-white/80 dark:bg-slate-900/70 border border-amber-100 dark:border-slate-700 text-xs text-slate-600 dark:text-slate-300"><strong class="text-slate-900 dark:text-white">Cara main:</strong> 30–45 detik per pemimpin. Gerakan bebas, aman, dan tidak menyentuh peserta lain.</div>
+            </div>
+            <button onclick="showIcePrompt('chain')" class="mt-5 w-full py-3 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-sm shadow-md transition"><i class="fa-solid fa-shuffle mr-2"></i> Acak Tantangan</button>
+          </div>
+
+          <div class="bg-gradient-to-br from-cyan-50 to-white dark:from-slate-800 dark:to-slate-900 p-6 rounded-3xl border border-cyan-200 dark:border-slate-700 shadow-md flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4"><span class="px-3 py-1 rounded-full bg-cyan-100 dark:bg-cyan-900/40 text-cyan-700 dark:text-cyan-300 text-xs font-bold">Ice Breaking 2</span><i class="fa-solid fa-volume-xmark text-2xl text-cyan-500"></i></div>
+              <h3 class="text-xl font-extrabold text-slate-900 dark:text-white mb-2">Komando Tanpa Suara</h3>
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">Kelompok menunjuk seorang pemimpin. Pemimpin memberi instruksi hanya dengan ekspresi dan gestur, sementara anggota mencoba mengikuti. Fokusnya komunikasi nonverbal dan kekompakan.</p>
+              <div class="p-3 rounded-xl bg-white/80 dark:bg-slate-900/70 border border-cyan-100 dark:border-slate-700 text-xs text-slate-600 dark:text-slate-300"><strong class="text-slate-900 dark:text-white">Contoh:</strong> bentuk lingkaran, angkat tangan, tepuk 2 kali, duduk, berdiri. Tidak boleh berbicara selama ronde.</div>
+            </div>
+            <button onclick="showIcePrompt('silent')" class="mt-5 w-full py-3 rounded-xl bg-cyan-500 hover:bg-cyan-600 text-white font-bold text-sm shadow-md transition"><i class="fa-solid fa-wand-magic-sparkles mr-2"></i> Ambil Misi</button>
+          </div>
+
+          <div class="bg-gradient-to-br from-fuchsia-50 to-white dark:from-slate-800 dark:to-slate-900 p-6 rounded-3xl border border-fuchsia-200 dark:border-slate-700 shadow-md flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4"><span class="px-3 py-1 rounded-full bg-fuchsia-100 dark:bg-fuchsia-900/40 text-fuchsia-700 dark:text-fuchsia-300 text-xs font-bold">Ice Breaking 3</span><i class="fa-solid fa-lightbulb text-2xl text-fuchsia-500"></i></div>
+              <h3 class="text-xl font-extrabold text-slate-900 dark:text-white mb-2">Satu Kata, Satu Pemimpin</h3>
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">Setiap peserta menyebutkan satu kata yang menurut mereka menggambarkan pemimpin ideal. Tidak boleh ada kata yang sama. Aktivitas ini membantu saling mengenal dan memunculkan ide positif.</p>
+              <div class="p-3 rounded-xl bg-white/80 dark:bg-slate-900/70 border border-fuchsia-100 dark:border-slate-700 text-xs text-slate-600 dark:text-slate-300"><strong class="text-slate-900 dark:text-white">Variasi:</strong> peserta yang sudah menyebut kata memberi “estafet” kepada peserta berikutnya dengan menunjuk nama secara acak.</div>
+            </div>
+            <button onclick="showIcePrompt('word')" class="mt-5 w-full py-3 rounded-xl bg-fuchsia-500 hover:bg-fuchsia-600 text-white font-bold text-sm shadow-md transition"><i class="fa-solid fa-dice mr-2"></i> Mulai Tantangan</button>
+          </div>
+        </div>
+
+        <div id="icePromptBox" class="bg-slate-900 text-white p-6 sm:p-8 rounded-3xl shadow-2xl border border-slate-700 hidden">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-5"><div><div class="text-xs font-bold text-emerald-300 uppercase tracking-wider mb-2">Tantangan Acak</div><h3 id="icePromptTitle" class="text-xl sm:text-2xl font-extrabold mb-2">Siap?</h3><p id="icePromptText" class="text-sm text-slate-300 leading-relaxed max-w-3xl">Klik salah satu permainan untuk memunculkan tantangan.</p></div><button onclick="hideIcePrompt()" class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs font-bold whitespace-nowrap">Tutup</button></div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-900/60"><div class="flex items-start gap-3"><i class="fa-solid fa-circle-info text-emerald-600 dark:text-emerald-400 mt-0.5"></i><div class="text-xs sm:text-sm text-emerald-900 dark:text-emerald-200 leading-relaxed"><strong>Catatan fasilitator:</strong> Ice breaking ini tidak menggunakan soal materi LDKS. Fokusnya adalah membangun energi positif, keberanian, komunikasi, kekompakan, dan suasana aman sebelum peserta kembali ke kegiatan inti.</div></div></div>
       </div>
 
       <!-- CONTAINER KUIS -->
@@ -1576,21 +1620,40 @@
     // ICE BREAKING TAB SWITCHER
     function switchIceTab(tab) {
       const tabGameBtn = document.getElementById('tabGameBtn');
+      const tabIceBtn = document.getElementById('tabIceBtn');
       const tabQuizBtn = document.getElementById('tabQuizBtn');
       const gameContainer = document.getElementById('gameContainer');
+      const iceContainer = document.getElementById('iceContainer');
       const quizContainer = document.getElementById('quizContainer');
+      const base = "px-5 sm:px-6 py-3 rounded-xl text-xs sm:text-sm font-bold transition";
+      const active = base + " bg-emerald-600 text-white shadow-md";
+      const inactive = base + " text-slate-600 dark:text-slate-300 hover:text-slate-900";
+      tabGameBtn.className = tab === 'game' ? active : inactive;
+      tabIceBtn.className = tab === 'ice' ? active : inactive;
+      tabQuizBtn.className = tab === 'quiz' ? active : inactive;
+      gameContainer.classList.toggle('hidden', tab !== 'game');
+      iceContainer.classList.toggle('hidden', tab !== 'ice');
+      quizContainer.classList.toggle('hidden', tab !== 'quiz');
+    }
 
-      if (tab === 'game') {
-        tabGameBtn.className = "px-6 py-3 rounded-xl text-xs sm:text-sm font-bold bg-emerald-600 text-white shadow-md transition";
-        tabQuizBtn.className = "px-6 py-3 rounded-xl text-xs sm:text-sm font-bold text-slate-600 dark:text-slate-300 hover:text-slate-900 transition";
-        gameContainer.classList.remove('hidden');
-        quizContainer.classList.add('hidden');
-      } else {
-        tabQuizBtn.className = "px-6 py-3 rounded-xl text-xs sm:text-sm font-bold bg-emerald-600 text-white shadow-md transition";
-        tabGameBtn.className = "px-6 py-3 rounded-xl text-xs sm:text-sm font-bold text-slate-600 dark:text-slate-300 hover:text-slate-900 transition";
-        quizContainer.classList.remove('hidden');
-        gameContainer.classList.add('hidden');
-      }
+    // ICE BREAKING LOGIC
+    const icePrompts = {
+      chain: [["Gerak Cepat", "Buat satu gerakan sederhana selama 5 detik. Setelah itu tunjuk peserta berikutnya untuk menjadi pemimpin selanjutnya."], ["Pemimpin Kreatif", "Tunjukkan gaya berjalan lucu tetapi tetap sopan selama 5 detik, lalu pilih peserta lain sebagai pemimpin berikutnya."], ["Ekspresi Positif", "Pimpin kelompok membuat ekspresi ‘semangat’, ‘percaya diri’, lalu ‘siap bekerja sama’ tanpa perlu berbicara."]],
+      silent: [["Misi 1", "Bentuk dua baris dengan urutan tinggi badan tanpa berbicara. Gunakan gestur saja."], ["Misi 2", "Tanpa suara, arahkan kelompok membuat bentuk lingkaran dalam waktu 20 detik."], ["Misi 3", "Pemimpin harus membuat semua anggota melakukan urutan: berdiri → tepuk dua kali → duduk, hanya dengan gestur."]],
+      word: [["Kata Kunci A", "Sebutkan satu kata yang menggambarkan pemimpin ideal. Tidak boleh sama dengan peserta sebelumnya."], ["Kata Kunci B", "Sebutkan satu karakter pemimpin yang paling dibutuhkan sebuah tim. Jelaskan alasannya dalam satu kalimat."], ["Kata Kunci C", "Sebutkan satu kebiasaan positif seorang pemimpin. Pilih peserta berikutnya dengan cara menunjuk."]]
+    };
+
+    function showIcePrompt(type) {
+      const prompts = icePrompts[type];
+      const selected = prompts[Math.floor(Math.random() * prompts.length)];
+      document.getElementById('icePromptTitle').innerText = selected[0];
+      document.getElementById('icePromptText').innerText = selected[1];
+      document.getElementById('icePromptBox').classList.remove('hidden');
+      document.getElementById('icePromptBox').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    function hideIcePrompt() {
+      document.getElementById('icePromptBox').classList.add('hidden');
     }
 
     // GAME 1 LOGIC
